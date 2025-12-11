@@ -126,7 +126,3 @@ Créé avec ❤️ pour l'apprentissage des régions européennes.
 
 ---
 
-## ⭐ Remerciements
-
-- Drapeaux sous licence libre
-- Polices : Google Fonts (Playfair Display, Source Sans 3)
