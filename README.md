@@ -28,10 +28,7 @@ Un quiz élégant et interactif qui teste vos connaissances sur **127 régions**
 
 - 🎮 **3 niveaux de difficulté** : Facile (5Q), Moyen (10Q), Difficile (15Q)
 - 🌐 **10 modes de jeu** : Par pays ou tous les pays mélangés
-- 📊 **Feedback en temps réel** : Score et progression visuelle
-- 🎨 **Design sophistiqué** : Interface élégante et responsive
-- 📱 **Mobile-friendly** : Fonctionne sur tous les appareils
-
+  
 ---
 
 ## 🚀 Démarrage Rapide
@@ -96,9 +93,6 @@ quiz-drapeaux-europe/
 ---
 
 ## 🎨 Captures d'écran
-
-### Écran de Configuration
-Interface élégante pour choisir le pays et la difficulté.
 
 ### Quiz en Action
 Affichage du drapeau avec 4 options de réponse.
