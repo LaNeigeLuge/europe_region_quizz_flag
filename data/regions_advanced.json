@@ -1,0 +1,998 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "total_regions": 127,
+    "difficulty_levels": {
+      "1": "Très facile (capitales, très connues)",
+      "2": "Facile",
+      "3": "Moyen",
+      "4": "Difficile",
+      "5": "Très difficile"
+    }
+  },
+  "trap_groups": {
+    "brabants": {
+      "type": "similar_names",
+      "regions": ["Brabant Flamand", "Brabant Wallon", "Brabant-Septentrional"]
+    },
+    "rhodes": {
+      "type": "similar_names",
+      "regions": ["Appenzell Rhodes-Extérieures", "Appenzell Rhodes-Intérieures"]
+    },
+    "hollands": {
+      "type": "similar_names",
+      "regions": ["Hollande-Septentrionale", "Hollande-Méridionale"]
+    },
+    "bales": {
+      "type": "similar_names",
+      "regions": ["Bâle-Ville", "Bâle-Campagne"]
+    },
+    "castilles": {
+      "type": "similar_names",
+      "regions": ["Castille-et-León", "Castille-La Manche"]
+    },
+    "flandres": {
+      "type": "similar_names",
+      "regions": ["Flandre Occidentale", "Flandre Orientale", "Région Flamande"]
+    }
+  },
+  "visual_groups": {
+    "croix_suisse": {
+      "type": "visual_similarity",
+      "description": "Drapeaux avec croix suisse ou similaire",
+      "regions": ["Schwyz", "Uri", "Soleure", "Genève", "Fribourg"]
+    },
+    "tricolore_horizontal": {
+      "type": "visual_similarity",
+      "description": "Drapeaux tricolores horizontaux",
+      "regions": ["Pays de la Loire", "Frise", "Brabant-Septentrional"]
+    },
+    "rouge_blanc": {
+      "type": "visual_similarity",
+      "description": "Drapeaux rouge et blanc",
+      "regions": ["Brabant Flamand", "Brabant Wallon", "Soleure", "Schwyz", "Tyrol"]
+    },
+    "bleu_blanc": {
+      "type": "visual_similarity",
+      "description": "Drapeaux bleu et blanc",
+      "regions": ["Bavière", "Zurich", "Grisons", "Saint-Gall"]
+    },
+    "bicolore_vertical": {
+      "type": "visual_similarity",
+      "description": "Drapeaux bicolores verticaux",
+      "regions": ["Fribourg", "Valais", "Neuchâtel", "Genève"]
+    },
+    "armoiries_complexes": {
+      "type": "visual_similarity",
+      "description": "Drapeaux avec armoiries détaillées",
+      "regions": ["Berne", "Schaffhouse", "Appenzell Rhodes-Intérieures", "Obwald", "Nidwald"]
+    }
+  },
+  "regions": [
+    {
+      "name": "Bretagne",
+      "flag": "drapeaux_regions/france-bretagne.png",
+      "country": "france",
+      "difficulty": 1,
+      "tags": ["connue", "distinctive"]
+    },
+    {
+      "name": "Corse",
+      "flag": "drapeaux_regions/france-corse.png",
+      "country": "france",
+      "difficulty": 1,
+      "tags": ["connue", "distinctive", "ile"]
+    },
+    {
+      "name": "Provence-Alpes-Côte d'Azur",
+      "flag": "drapeaux_regions/france-provence-alpes-cote-azur.png",
+      "country": "france",
+      "difficulty": 1,
+      "tags": ["connue", "touristique"]
+    },
+    {
+      "name": "Occitanie",
+      "flag": "drapeaux_regions/france-occitanie.png",
+      "country": "france",
+      "difficulty": 2,
+      "tags": ["connue"]
+    },
+    {
+      "name": "Normandie",
+      "flag": "drapeaux_regions/france-normandie.png",
+      "country": "france",
+      "difficulty": 2,
+      "tags": ["connue", "historique"]
+    },
+    {
+      "name": "Île-de-France",
+      "flag": "drapeaux_regions/france-ile-de-france.png",
+      "country": "france",
+      "difficulty": 1,
+      "tags": ["capitale", "paris", "connue"]
+    },
+    {
+      "name": "Grand Est",
+      "flag": "drapeaux_regions/france-grand-est.png",
+      "country": "france",
+      "difficulty": 3,
+      "tags": []
+    },
+    {
+      "name": "Nouvelle-Aquitaine",
+      "flag": "drapeaux_regions/france-nouvelle-aquitaine.png",
+      "country": "france",
+      "difficulty": 3,
+      "tags": []
+    },
+    {
+      "name": "Auvergne-Rhône-Alpes",
+      "flag": "drapeaux_regions/france-auvergne-rhone-alpes.png",
+      "country": "france",
+      "difficulty": 3,
+      "tags": []
+    },
+    {
+      "name": "Hauts-de-France",
+      "flag": "drapeaux_regions/france-hauts-de-france.png",
+      "country": "france",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Bourgogne-Franche-Comté",
+      "flag": "drapeaux_regions/france-bourgogne-franche-comte.png",
+      "country": "france",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Pays de la Loire",
+      "flag": "drapeaux_regions/france-pays-de-la-loire.png",
+      "country": "france",
+      "difficulty": 4,
+      "tags": [],
+      "visual_group": "tricolore_horizontal"
+    },
+    {
+      "name": "Centre-Val de Loire",
+      "flag": "drapeaux_regions/france-centre-val-de-loire.png",
+      "country": "france",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Bavière",
+      "flag": "drapeaux_regions/allemagne-baviere.png",
+      "country": "germany",
+      "difficulty": 1,
+      "tags": ["connue", "munich"],
+      "visual_group": "bleu_blanc"
+    },
+    {
+      "name": "Bade-Wurtemberg",
+      "flag": "drapeaux_regions/allemagne-bade-wurtemberg.png",
+      "country": "germany",
+      "difficulty": 3,
+      "tags": []
+    },
+    {
+      "name": "Rhénanie-du-Nord-Westphalie",
+      "flag": "drapeaux_regions/allemagne-rhenanie-du-nord-westphalie.png",
+      "country": "germany",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Basse-Saxe",
+      "flag": "drapeaux_regions/allemagne-basse-saxe.png",
+      "country": "germany",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Hesse",
+      "flag": "drapeaux_regions/allemagne-hesse.png",
+      "country": "germany",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Saxe-Anhalt",
+      "flag": "drapeaux_regions/allemagne-saxe.png",
+      "country": "germany",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Rhénanie-Palatinat",
+      "flag": "drapeaux_regions/allemagne-rhenanie-palatinat.png",
+      "country": "germany",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Berlin",
+      "flag": "drapeaux_regions/allemagne-berlin.png",
+      "country": "germany",
+      "difficulty": 1,
+      "tags": ["capitale", "connue"]
+    },
+    {
+      "name": "Schleswig-Holstein",
+      "flag": "drapeaux_regions/allemagne-schleswig-holstein.png",
+      "country": "germany",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Brandebourg",
+      "flag": "drapeaux_regions/allemagne-brandebourg.png",
+      "country": "germany",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Thuringe",
+      "flag": "drapeaux_regions/allemagne-thuringe.png",
+      "country": "germany",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Hambourg",
+      "flag": "drapeaux_regions/allemagne-hambourg.png",
+      "country": "germany",
+      "difficulty": 1,
+      "tags": ["connue", "ville"]
+    },
+    {
+      "name": "Mecklembourg-Poméranie-Occidentale",
+      "flag": "drapeaux_regions/allemagne-mecklembourg-pomeranie-occidentale.png",
+      "country": "germany",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Sarre",
+      "flag": "drapeaux_regions/allemagne-sarre.png",
+      "country": "germany",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Brême",
+      "flag": "drapeaux_regions/allemagne-breme.png",
+      "country": "germany",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Zurich",
+      "flag": "drapeaux_regions/suisse-zurich.png",
+      "country": "switzerland",
+      "difficulty": 1,
+      "tags": ["connue", "financier"],
+      "visual_group": "bleu_blanc"
+    },
+    {
+      "name": "Berne",
+      "flag": "drapeaux_regions/suisse-berne.png",
+      "country": "switzerland",
+      "difficulty": 1,
+      "tags": ["capitale", "connue"],
+      "visual_group": "armoiries_complexes"
+    },
+    {
+      "name": "Genève",
+      "flag": "drapeaux_regions/suisse-geneve.png",
+      "country": "switzerland",
+      "difficulty": 1,
+      "tags": ["connue", "international"],
+      "visual_group": "bicolore_vertical"
+    },
+    {
+      "name": "Vaud",
+      "flag": "drapeaux_regions/suisse-vaud.png",
+      "country": "switzerland",
+      "difficulty": 3,
+      "tags": []
+    },
+    {
+      "name": "Valais",
+      "flag": "drapeaux_regions/suisse-valais.png",
+      "country": "switzerland",
+      "difficulty": 3,
+      "tags": [],
+      "visual_group": "bicolore_vertical"
+    },
+    {
+      "name": "Bâle-Ville",
+      "flag": "drapeaux_regions/suisse-bale-ville.png",
+      "country": "switzerland",
+      "difficulty": 4,
+      "tags": [],
+      "trap_group": "bales"
+    },
+    {
+      "name": "Tessin",
+      "flag": "drapeaux_regions/suisse-tessin.png",
+      "country": "switzerland",
+      "difficulty": 3,
+      "tags": []
+    },
+    {
+      "name": "Saint-Gall",
+      "flag": "drapeaux_regions/suisse-saint-gall.png",
+      "country": "switzerland",
+      "difficulty": 4,
+      "tags": [],
+      "visual_group": "bleu_blanc"
+    },
+    {
+      "name": "Grisons",
+      "flag": "drapeaux_regions/suisse-grisons.png",
+      "country": "switzerland",
+      "difficulty": 4,
+      "tags": [],
+      "visual_group": "bleu_blanc"
+    },
+    {
+      "name": "Argovie",
+      "flag": "drapeaux_regions/suisse-argovie.png",
+      "country": "switzerland",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Thurgovie",
+      "flag": "drapeaux_regions/suisse-thurgovie.png",
+      "country": "switzerland",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Fribourg",
+      "flag": "drapeaux_regions/suisse-fribourg.png",
+      "country": "switzerland",
+      "difficulty": 4,
+      "tags": [],
+      "visual_group": "bicolore_vertical"
+    },
+    {
+      "name": "Neuchâtel",
+      "flag": "drapeaux_regions/suisse-neuchatel.png",
+      "country": "switzerland",
+      "difficulty": 4,
+      "tags": [],
+      "visual_group": "bicolore_vertical"
+    },
+    {
+      "name": "Schwyz",
+      "flag": "drapeaux_regions/suisse-schwyz.png",
+      "country": "switzerland",
+      "difficulty": 5,
+      "tags": [],
+      "visual_group": "rouge_blanc"
+    },
+    {
+      "name": "Uri",
+      "flag": "drapeaux_regions/suisse-uri.png",
+      "country": "switzerland",
+      "difficulty": 5,
+      "tags": [],
+      "visual_group": "croix_suisse"
+    },
+    {
+      "name": "Soleure",
+      "flag": "drapeaux_regions/suisse-soleure.png",
+      "country": "switzerland",
+      "difficulty": 5,
+      "tags": [],
+      "visual_group": "rouge_blanc"
+    },
+    {
+      "name": "Bâle-Campagne",
+      "flag": "drapeaux_regions/suisse-bale-campagne.png",
+      "country": "switzerland",
+      "difficulty": 5,
+      "tags": [],
+      "trap_group": "bales"
+    },
+    {
+      "name": "Schaffhouse",
+      "flag": "drapeaux_regions/suisse-schaffhouse.png",
+      "country": "switzerland",
+      "difficulty": 5,
+      "tags": [],
+      "visual_group": "armoiries_complexes"
+    },
+    {
+      "name": "Appenzell Rhodes-Extérieures",
+      "flag": "drapeaux_regions/suisse-appenzell-rhodes-exterieures.png",
+      "country": "switzerland",
+      "difficulty": 5,
+      "tags": [],
+      "trap_group": "rhodes"
+    },
+    {
+      "name": "Appenzell Rhodes-Intérieures",
+      "flag": "drapeaux_regions/suisse-appenzell-rhodes-interieures.png",
+      "country": "switzerland",
+      "difficulty": 5,
+      "tags": [],
+      "trap_group": "rhodes",
+      "visual_group": "armoiries_complexes"
+    },
+    {
+      "name": "Glaris",
+      "flag": "drapeaux_regions/suisse-glaris.png",
+      "country": "switzerland",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Zoug",
+      "flag": "drapeaux_regions/suisse-zoug.png",
+      "country": "switzerland",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Obwald",
+      "flag": "drapeaux_regions/suisse-obwald.png",
+      "country": "switzerland",
+      "difficulty": 5,
+      "tags": [],
+      "visual_group": "armoiries_complexes"
+    },
+    {
+      "name": "Nidwald",
+      "flag": "drapeaux_regions/suisse-nidwald.png",
+      "country": "switzerland",
+      "difficulty": 5,
+      "tags": [],
+      "visual_group": "armoiries_complexes"
+    },
+    {
+      "name": "Jura",
+      "flag": "drapeaux_regions/suisse-jura.png",
+      "country": "switzerland",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Catalogne",
+      "flag": "drapeaux_regions/espagne-catalogne.png",
+      "country": "spain",
+      "difficulty": 1,
+      "tags": ["connue", "barcelone", "autonome"]
+    },
+    {
+      "name": "Pays Basque",
+      "flag": "drapeaux_regions/espagne-pays-basque.png",
+      "country": "spain",
+      "difficulty": 1,
+      "tags": ["connue", "distinctive"]
+    },
+    {
+      "name": "Galice",
+      "flag": "drapeaux_regions/espagne-galice.png",
+      "country": "spain",
+      "difficulty": 2,
+      "tags": ["connue"]
+    },
+    {
+      "name": "Andalousie",
+      "flag": "drapeaux_regions/espagne-andalousie.png",
+      "country": "spain",
+      "difficulty": 1,
+      "tags": ["connue", "touristique"]
+    },
+    {
+      "name": "Communauté Valencienne",
+      "flag": "drapeaux_regions/espagne-communaute-valencienne.png",
+      "country": "spain",
+      "difficulty": 3,
+      "tags": []
+    },
+    {
+      "name": "Canaries",
+      "flag": "drapeaux_regions/espagne-canaries.png",
+      "country": "spain",
+      "difficulty": 2,
+      "tags": ["connue", "ile", "touristique"]
+    },
+    {
+      "name": "Castille-et-León",
+      "flag": "drapeaux_regions/espagne-castille-et-leon.png",
+      "country": "spain",
+      "difficulty": 4,
+      "tags": [],
+      "trap_group": "castilles"
+    },
+    {
+      "name": "Madrid",
+      "flag": "drapeaux_regions/espagne-madrid.png",
+      "country": "spain",
+      "difficulty": 1,
+      "tags": ["capitale", "connue"]
+    },
+    {
+      "name": "Castille-La Manche",
+      "flag": "drapeaux_regions/espagne-castille-la-manche.png",
+      "country": "spain",
+      "difficulty": 4,
+      "tags": [],
+      "trap_group": "castilles"
+    },
+    {
+      "name": "Murcie",
+      "flag": "drapeaux_regions/espagne-murcie.png",
+      "country": "spain",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Aragon",
+      "flag": "drapeaux_regions/espagne-aragon.png",
+      "country": "spain",
+      "difficulty": 3,
+      "tags": []
+    },
+    {
+      "name": "Estrémadure",
+      "flag": "drapeaux_regions/espagne-estremadure.png",
+      "country": "spain",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Baléares",
+      "flag": "drapeaux_regions/espagne-baleares.png",
+      "country": "spain",
+      "difficulty": 2,
+      "tags": ["connue", "ile", "touristique"]
+    },
+    {
+      "name": "Asturies",
+      "flag": "drapeaux_regions/espagne-asturies.png",
+      "country": "spain",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Navarre",
+      "flag": "drapeaux_regions/espagne-navarre.png",
+      "country": "spain",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Cantabrie",
+      "flag": "drapeaux_regions/espagne-cantabrie.png",
+      "country": "spain",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "La Rioja",
+      "flag": "drapeaux_regions/espagne-la-rioja.png",
+      "country": "spain",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Lombardie",
+      "flag": "drapeaux_regions/italie-lombardie.png",
+      "country": "italy",
+      "difficulty": 1,
+      "tags": ["connue", "milan"]
+    },
+    {
+      "name": "Sicile",
+      "flag": "drapeaux_regions/italie-sicile.png",
+      "country": "italy",
+      "difficulty": 1,
+      "tags": ["connue", "ile", "distinctive"]
+    },
+    {
+      "name": "Vénétie",
+      "flag": "drapeaux_regions/italie-venetie.png",
+      "country": "italy",
+      "difficulty": 1,
+      "tags": ["connue", "venise"]
+    },
+    {
+      "name": "Latium",
+      "flag": "drapeaux_regions/italie-latium.png",
+      "country": "italy",
+      "difficulty": 1,
+      "tags": ["capitale", "rome", "connue"]
+    },
+    {
+      "name": "Piémont",
+      "flag": "drapeaux_regions/italie-piemont.png",
+      "country": "italy",
+      "difficulty": 2,
+      "tags": ["turin"]
+    },
+    {
+      "name": "Campanie",
+      "flag": "drapeaux_regions/italie-campanie.png",
+      "country": "italy",
+      "difficulty": 2,
+      "tags": ["naples"]
+    },
+    {
+      "name": "Émilie-Romagne",
+      "flag": "drapeaux_regions/italie-emilie-romagne.png",
+      "country": "italy",
+      "difficulty": 3,
+      "tags": []
+    },
+    {
+      "name": "Toscane",
+      "flag": "drapeaux_regions/italie-toscane.png",
+      "country": "italy",
+      "difficulty": 1,
+      "tags": ["connue", "florence", "touristique"]
+    },
+    {
+      "name": "Pouilles",
+      "flag": "drapeaux_regions/italie-pouilles.png",
+      "country": "italy",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Calabre",
+      "flag": "drapeaux_regions/italie-calabre.png",
+      "country": "italy",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Sardaigne",
+      "flag": "drapeaux_regions/italie-sardaigne.png",
+      "country": "italy",
+      "difficulty": 2,
+      "tags": ["connue", "ile"]
+    },
+    {
+      "name": "Ligurie",
+      "flag": "drapeaux_regions/italie-ligurie.png",
+      "country": "italy",
+      "difficulty": 3,
+      "tags": []
+    },
+    {
+      "name": "Marches",
+      "flag": "drapeaux_regions/italie-marches.png",
+      "country": "italy",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Abruzzes",
+      "flag": "drapeaux_regions/italie-abruzzes.png",
+      "country": "italy",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Frioul-Vénétie Julienne",
+      "flag": "drapeaux_regions/italie-frioul-venetie-julienne.png",
+      "country": "italy",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Trentin-Haut-Adige",
+      "flag": "drapeaux_regions/italie-trentin-haut-adige.png",
+      "country": "italy",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Ombrie",
+      "flag": "drapeaux_regions/italie-ombrie.png",
+      "country": "italy",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Basilicate",
+      "flag": "drapeaux_regions/italie-basilicate.png",
+      "country": "italy",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Molise",
+      "flag": "drapeaux_regions/italie-molise.png",
+      "country": "italy",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Vallée d'Aoste",
+      "flag": "drapeaux_regions/italie-vallee-aoste.png",
+      "country": "italy",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Anvers",
+      "flag": "drapeaux_regions/belgique-anvers.png",
+      "country": "belgium",
+      "difficulty": 2,
+      "tags": ["connue"]
+    },
+    {
+      "name": "Brabant Flamand",
+      "flag": "drapeaux_regions/belgique-brabant-flamand.png",
+      "country": "belgium",
+      "difficulty": 4,
+      "tags": [],
+      "trap_group": "brabants",
+      "visual_group": "rouge_blanc"
+    },
+    {
+      "name": "Brabant Wallon",
+      "flag": "drapeaux_regions/belgique-brabant-wallon.png",
+      "country": "belgium",
+      "difficulty": 4,
+      "tags": [],
+      "trap_group": "brabants",
+      "visual_group": "rouge_blanc"
+    },
+    {
+      "name": "Bruxelles-Capitale",
+      "flag": "drapeaux_regions/belgique-bruxelles.png",
+      "country": "belgium",
+      "difficulty": 1,
+      "tags": ["capitale", "connue"]
+    },
+    {
+      "name": "Flandre Occidentale",
+      "flag": "drapeaux_regions/belgique-flandre-occidentale.png",
+      "country": "belgium",
+      "difficulty": 5,
+      "tags": [],
+      "trap_group": "flandres"
+    },
+    {
+      "name": "Flandre Orientale",
+      "flag": "drapeaux_regions/belgique-flandre-orientale.png",
+      "country": "belgium",
+      "difficulty": 5,
+      "tags": [],
+      "trap_group": "flandres"
+    },
+    {
+      "name": "Région Flamande",
+      "flag": "drapeaux_regions/belgique-flandre.png",
+      "country": "belgium",
+      "difficulty": 3,
+      "tags": [],
+      "trap_group": "flandres"
+    },
+    {
+      "name": "Hainaut",
+      "flag": "drapeaux_regions/belgique-hainaut.png",
+      "country": "belgium",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Liège",
+      "flag": "drapeaux_regions/belgique-liege.png",
+      "country": "belgium",
+      "difficulty": 3,
+      "tags": []
+    },
+    {
+      "name": "Limbourg",
+      "flag": "drapeaux_regions/belgique-limbourg.png",
+      "country": "belgium",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Luxembourg",
+      "flag": "drapeaux_regions/belgique-luxembourg.png",
+      "country": "belgium",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Namur",
+      "flag": "drapeaux_regions/belgique-namur.png",
+      "country": "belgium",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Wallonie",
+      "flag": "drapeaux_regions/belgique-wallonie.png",
+      "country": "belgium",
+      "difficulty": 3,
+      "tags": []
+    },
+    {
+      "name": "Groningue",
+      "flag": "drapeaux_regions/pays-bas-groningue.png",
+      "country": "netherlands",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Drenthe",
+      "flag": "drapeaux_regions/pays-bas-drenthe.png",
+      "country": "netherlands",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Flevoland",
+      "flag": "drapeaux_regions/pays-bas-flevoland.png",
+      "country": "netherlands",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Gueldre",
+      "flag": "drapeaux_regions/pays-bas-gueldre.png",
+      "country": "netherlands",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Limbourg",
+      "flag": "drapeaux_regions/pays-bas-limbourg.png",
+      "country": "netherlands",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Hollande-Septentrionale",
+      "flag": "drapeaux_regions/pays-bas-hollande-septentrionale.png",
+      "country": "netherlands",
+      "difficulty": 3,
+      "tags": ["amsterdam"],
+      "trap_group": "hollands"
+    },
+    {
+      "name": "Overijssel",
+      "flag": "drapeaux_regions/pays-bas-overijssel.png",
+      "country": "netherlands",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Zélande",
+      "flag": "drapeaux_regions/pays-bas-zelande.png",
+      "country": "netherlands",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Hollande-Méridionale",
+      "flag": "drapeaux_regions/pays-bas-hollande-meridionale.png",
+      "country": "netherlands",
+      "difficulty": 3,
+      "tags": ["rotterdam"],
+      "trap_group": "hollands"
+    },
+    {
+      "name": "Frise",
+      "flag": "drapeaux_regions/pays-bas-frise.png",
+      "country": "netherlands",
+      "difficulty": 4,
+      "tags": [],
+      "visual_group": "tricolore_horizontal"
+    },
+    {
+      "name": "Brabant-Septentrional",
+      "flag": "drapeaux_regions/pays-bas-brabant-septentrional.png",
+      "country": "netherlands",
+      "difficulty": 4,
+      "tags": [],
+      "trap_group": "brabants",
+      "visual_group": "tricolore_horizontal"
+    },
+    {
+      "name": "Utrecht",
+      "flag": "drapeaux_regions/pays-bas-utrecht.png",
+      "country": "netherlands",
+      "difficulty": 3,
+      "tags": []
+    },
+    {
+      "name": "Burgenland",
+      "flag": "drapeaux_regions/autriche-burgenland.png",
+      "country": "austria",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Carinthie",
+      "flag": "drapeaux_regions/autriche-carinthie.png",
+      "country": "austria",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Basse-Autriche",
+      "flag": "drapeaux_regions/autriche-basse-autriche.png",
+      "country": "austria",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Haute-Autriche",
+      "flag": "drapeaux_regions/autriche-haute-autriche.png",
+      "country": "austria",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Salzbourg",
+      "flag": "drapeaux_regions/autriche-salzbourg.png",
+      "country": "austria",
+      "difficulty": 2,
+      "tags": ["connue", "mozart"]
+    },
+    {
+      "name": "Styrie",
+      "flag": "drapeaux_regions/autriche-styrie.png",
+      "country": "austria",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Tyrol",
+      "flag": "drapeaux_regions/autriche-tyrol.png",
+      "country": "austria",
+      "difficulty": 3,
+      "tags": ["ski"],
+      "visual_group": "rouge_blanc"
+    },
+    {
+      "name": "Connacht",
+      "flag": "drapeaux_regions/irlande-connacht.png",
+      "country": "ireland",
+      "difficulty": 5,
+      "tags": []
+    },
+    {
+      "name": "Leinster",
+      "flag": "drapeaux_regions/irlande-leinster.png",
+      "country": "ireland",
+      "difficulty": 2,
+      "tags": ["dublin"]
+    },
+    {
+      "name": "Munster",
+      "flag": "drapeaux_regions/irlande-munster.png",
+      "country": "ireland",
+      "difficulty": 4,
+      "tags": []
+    },
+    {
+      "name": "Ulster",
+      "flag": "drapeaux_regions/irlande-ulster.png",
+      "country": "ireland",
+      "difficulty": 3,
+      "tags": ["belfast"]
+    },
+    {
+      "name": "Mide",
+      "flag": "drapeaux_regions/irlande-mide.png",
+      "country": "ireland",
+      "difficulty": 5,
+      "tags": []
+    }
+  ]
+}

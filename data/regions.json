@@ -1,0 +1,639 @@
+{
+  "regions": [
+    {
+      "name": "Bretagne",
+      "flag": "drapeaux_regions/france-bretagne.png",
+      "country": "france"
+    },
+    {
+      "name": "Corse",
+      "flag": "drapeaux_regions/france-corse.png",
+      "country": "france"
+    },
+    {
+      "name": "Provence-Alpes-Côte d'Azur",
+      "flag": "drapeaux_regions/france-provence-alpes-cote-azur.png",
+      "country": "france"
+    },
+    {
+      "name": "Occitanie",
+      "flag": "drapeaux_regions/france-occitanie.png",
+      "country": "france"
+    },
+    {
+      "name": "Normandie",
+      "flag": "drapeaux_regions/france-normandie.png",
+      "country": "france"
+    },
+    {
+      "name": "Île-de-France",
+      "flag": "drapeaux_regions/france-ile-de-france.png",
+      "country": "france"
+    },
+    {
+      "name": "Grand Est",
+      "flag": "drapeaux_regions/france-grand-est.png",
+      "country": "france"
+    },
+    {
+      "name": "Nouvelle-Aquitaine",
+      "flag": "drapeaux_regions/france-nouvelle-aquitaine.png",
+      "country": "france"
+    },
+    {
+      "name": "Auvergne-Rhône-Alpes",
+      "flag": "drapeaux_regions/france-auvergne-rhone-alpes.png",
+      "country": "france"
+    },
+    {
+      "name": "Hauts-de-France",
+      "flag": "drapeaux_regions/france-hauts-de-france.png",
+      "country": "france"
+    },
+    {
+      "name": "Bourgogne-Franche-Comté",
+      "flag": "drapeaux_regions/france-bourgogne-franche-comte.png",
+      "country": "france"
+    },
+    {
+      "name": "Pays de la Loire",
+      "flag": "drapeaux_regions/france-pays-de-la-loire.png",
+      "country": "france"
+    },
+    {
+      "name": "Centre-Val de Loire",
+      "flag": "drapeaux_regions/france-centre-val-de-loire.png",
+      "country": "france"
+    },
+    {
+      "name": "Bavière",
+      "flag": "drapeaux_regions/allemagne-baviere.png",
+      "country": "germany"
+    },
+    {
+      "name": "Bade-Wurtemberg",
+      "flag": "drapeaux_regions/allemagne-bade-wurtemberg.png",
+      "country": "germany"
+    },
+    {
+      "name": "Rhénanie-du-Nord-Westphalie",
+      "flag": "drapeaux_regions/allemagne-rhenanie-du-nord-westphalie.png",
+      "country": "germany"
+    },
+    {
+      "name": "Basse-Saxe",
+      "flag": "drapeaux_regions/allemagne-basse-saxe.png",
+      "country": "germany"
+    },
+    {
+      "name": "Hesse",
+      "flag": "drapeaux_regions/allemagne-hesse.png",
+      "country": "germany"
+    },
+    {
+      "name": "Saxe-Anhalt",
+      "flag": "drapeaux_regions/allemagne-saxe.png",
+      "country": "germany"
+    },
+    {
+      "name": "Rhénanie-Palatinat",
+      "flag": "drapeaux_regions/allemagne-rhenanie-palatinat.png",
+      "country": "germany"
+    },
+    {
+      "name": "Berlin",
+      "flag": "drapeaux_regions/allemagne-berlin.png",
+      "country": "germany"
+    },
+    {
+      "name": "Schleswig-Holstein",
+      "flag": "drapeaux_regions/allemagne-schleswig-holstein.png",
+      "country": "germany"
+    },
+    {
+      "name": "Brandebourg",
+      "flag": "drapeaux_regions/allemagne-brandebourg.png",
+      "country": "germany"
+    },
+    {
+      "name": "Thuringe",
+      "flag": "drapeaux_regions/allemagne-thuringe.png",
+      "country": "germany"
+    },
+    {
+      "name": "Hambourg",
+      "flag": "drapeaux_regions/allemagne-hambourg.png",
+      "country": "germany"
+    },
+    {
+      "name": "Mecklembourg-Poméranie-Occidentale",
+      "flag": "drapeaux_regions/allemagne-mecklembourg-pomeranie-occidentale.png",
+      "country": "germany"
+    },
+    {
+      "name": "Sarre",
+      "flag": "drapeaux_regions/allemagne-sarre.png",
+      "country": "germany"
+    },
+    {
+      "name": "Brême",
+      "flag": "drapeaux_regions/allemagne-breme.png",
+      "country": "germany"
+    },
+    {
+      "name": "Zurich",
+      "flag": "drapeaux_regions/suisse-zurich.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Berne",
+      "flag": "drapeaux_regions/suisse-berne.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Genève",
+      "flag": "drapeaux_regions/suisse-geneve.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Vaud",
+      "flag": "drapeaux_regions/suisse-vaud.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Valais",
+      "flag": "drapeaux_regions/suisse-valais.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Bâle-Ville",
+      "flag": "drapeaux_regions/suisse-bale-ville.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Tessin",
+      "flag": "drapeaux_regions/suisse-tessin.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Saint-Gall",
+      "flag": "drapeaux_regions/suisse-saint-gall.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Grisons",
+      "flag": "drapeaux_regions/suisse-grisons.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Argovie",
+      "flag": "drapeaux_regions/suisse-argovie.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Thurgovie",
+      "flag": "drapeaux_regions/suisse-thurgovie.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Fribourg",
+      "flag": "drapeaux_regions/suisse-fribourg.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Neuchâtel",
+      "flag": "drapeaux_regions/suisse-neuchatel.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Schwyz",
+      "flag": "drapeaux_regions/suisse-schwyz.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Uri",
+      "flag": "drapeaux_regions/suisse-uri.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Soleure",
+      "flag": "drapeaux_regions/suisse-soleure.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Bâle-Campagne",
+      "flag": "drapeaux_regions/suisse-bale-campagne.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Schaffhouse",
+      "flag": "drapeaux_regions/suisse-schaffhouse.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Appenzell Rhodes-Extérieures",
+      "flag": "drapeaux_regions/suisse-appenzell-rhodes-exterieures.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Appenzell Rhodes-Intérieures",
+      "flag": "drapeaux_regions/suisse-appenzell-rhodes-interieures.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Glaris",
+      "flag": "drapeaux_regions/suisse-glaris.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Zoug",
+      "flag": "drapeaux_regions/suisse-zoug.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Obwald",
+      "flag": "drapeaux_regions/suisse-obwald.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Nidwald",
+      "flag": "drapeaux_regions/suisse-nidwald.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Jura",
+      "flag": "drapeaux_regions/suisse-jura.png",
+      "country": "switzerland"
+    },
+    {
+      "name": "Catalogne",
+      "flag": "drapeaux_regions/espagne-catalogne.png",
+      "country": "spain"
+    },
+    {
+      "name": "Pays Basque",
+      "flag": "drapeaux_regions/espagne-pays-basque.png",
+      "country": "spain"
+    },
+    {
+      "name": "Galice",
+      "flag": "drapeaux_regions/espagne-galice.png",
+      "country": "spain"
+    },
+    {
+      "name": "Andalousie",
+      "flag": "drapeaux_regions/espagne-andalousie.png",
+      "country": "spain"
+    },
+    {
+      "name": "Communauté Valencienne",
+      "flag": "drapeaux_regions/espagne-communaute-valencienne.png",
+      "country": "spain"
+    },
+    {
+      "name": "Canaries",
+      "flag": "drapeaux_regions/espagne-canaries.png",
+      "country": "spain"
+    },
+    {
+      "name": "Castille-et-León",
+      "flag": "drapeaux_regions/espagne-castille-et-leon.png",
+      "country": "spain"
+    },
+    {
+      "name": "Madrid",
+      "flag": "drapeaux_regions/espagne-madrid.png",
+      "country": "spain"
+    },
+    {
+      "name": "Castille-La Manche",
+      "flag": "drapeaux_regions/espagne-castille-la-manche.png",
+      "country": "spain"
+    },
+    {
+      "name": "Murcie",
+      "flag": "drapeaux_regions/espagne-murcie.png",
+      "country": "spain"
+    },
+    {
+      "name": "Aragon",
+      "flag": "drapeaux_regions/espagne-aragon.png",
+      "country": "spain"
+    },
+    {
+      "name": "Estrémadure",
+      "flag": "drapeaux_regions/espagne-estremadure.png",
+      "country": "spain"
+    },
+    {
+      "name": "Baléares",
+      "flag": "drapeaux_regions/espagne-baleares.png",
+      "country": "spain"
+    },
+    {
+      "name": "Asturies",
+      "flag": "drapeaux_regions/espagne-asturies.png",
+      "country": "spain"
+    },
+    {
+      "name": "Navarre",
+      "flag": "drapeaux_regions/espagne-navarre.png",
+      "country": "spain"
+    },
+    {
+      "name": "Cantabrie",
+      "flag": "drapeaux_regions/espagne-cantabrie.png",
+      "country": "spain"
+    },
+    {
+      "name": "La Rioja",
+      "flag": "drapeaux_regions/espagne-la-rioja.png",
+      "country": "spain"
+    },
+    {
+      "name": "Lombardie",
+      "flag": "drapeaux_regions/italie-lombardie.png",
+      "country": "italy"
+    },
+    {
+      "name": "Sicile",
+      "flag": "drapeaux_regions/italie-sicile.png",
+      "country": "italy"
+    },
+    {
+      "name": "Vénétie",
+      "flag": "drapeaux_regions/italie-venetie.png",
+      "country": "italy"
+    },
+    {
+      "name": "Latium",
+      "flag": "drapeaux_regions/italie-latium.png",
+      "country": "italy"
+    },
+    {
+      "name": "Piémont",
+      "flag": "drapeaux_regions/italie-piemont.png",
+      "country": "italy"
+    },
+    {
+      "name": "Campanie",
+      "flag": "drapeaux_regions/italie-campanie.png",
+      "country": "italy"
+    },
+    {
+      "name": "Émilie-Romagne",
+      "flag": "drapeaux_regions/italie-emilie-romagne.png",
+      "country": "italy"
+    },
+    {
+      "name": "Toscane",
+      "flag": "drapeaux_regions/italie-toscane.png",
+      "country": "italy"
+    },
+    {
+      "name": "Pouilles",
+      "flag": "drapeaux_regions/italie-pouilles.png",
+      "country": "italy"
+    },
+    {
+      "name": "Calabre",
+      "flag": "drapeaux_regions/italie-calabre.png",
+      "country": "italy"
+    },
+    {
+      "name": "Sardaigne",
+      "flag": "drapeaux_regions/italie-sardaigne.png",
+      "country": "italy"
+    },
+    {
+      "name": "Ligurie",
+      "flag": "drapeaux_regions/italie-ligurie.png",
+      "country": "italy"
+    },
+    {
+      "name": "Marches",
+      "flag": "drapeaux_regions/italie-marches.png",
+      "country": "italy"
+    },
+    {
+      "name": "Abruzzes",
+      "flag": "drapeaux_regions/italie-abruzzes.png",
+      "country": "italy"
+    },
+    {
+      "name": "Frioul-Vénétie Julienne",
+      "flag": "drapeaux_regions/italie-frioul-venetie-julienne.png",
+      "country": "italy"
+    },
+    {
+      "name": "Trentin-Haut-Adige",
+      "flag": "drapeaux_regions/italie-trentin-haut-adige.png",
+      "country": "italy"
+    },
+    {
+      "name": "Ombrie",
+      "flag": "drapeaux_regions/italie-ombrie.png",
+      "country": "italy"
+    },
+    {
+      "name": "Basilicate",
+      "flag": "drapeaux_regions/italie-basilicate.png",
+      "country": "italy"
+    },
+    {
+      "name": "Molise",
+      "flag": "drapeaux_regions/italie-molise.png",
+      "country": "italy"
+    },
+    {
+      "name": "Vallée d'Aoste",
+      "flag": "drapeaux_regions/italie-vallee-aoste.png",
+      "country": "italy"
+    },
+    {
+      "name": "Anvers",
+      "flag": "drapeaux_regions/belgique-anvers.png",
+      "country": "belgium"
+    },
+    {
+      "name": "Brabant Flamand",
+      "flag": "drapeaux_regions/belgique-brabant-flamand.png",
+      "country": "belgium"
+    },
+    {
+      "name": "Brabant Wallon",
+      "flag": "drapeaux_regions/belgique-brabant-wallon.png",
+      "country": "belgium"
+    },
+    {
+      "name": "Bruxelles-Capitale",
+      "flag": "drapeaux_regions/belgique-bruxelles.png",
+      "country": "belgium"
+    },
+    {
+      "name": "Flandre Occidentale",
+      "flag": "drapeaux_regions/belgique-flandre-occidentale.png",
+      "country": "belgium"
+    },
+    {
+      "name": "Flandre Orientale",
+      "flag": "drapeaux_regions/belgique-flandre-orientale.png",
+      "country": "belgium"
+    },
+    {
+      "name": "Région Flamande",
+      "flag": "drapeaux_regions/belgique-flandre.png",
+      "country": "belgium"
+    },
+    {
+      "name": "Hainaut",
+      "flag": "drapeaux_regions/belgique-hainaut.png",
+      "country": "belgium"
+    },
+    {
+      "name": "Liège",
+      "flag": "drapeaux_regions/belgique-liege.png",
+      "country": "belgium"
+    },
+    {
+      "name": "Limbourg",
+      "flag": "drapeaux_regions/belgique-limbourg.png",
+      "country": "belgium"
+    },
+    {
+      "name": "Luxembourg",
+      "flag": "drapeaux_regions/belgique-luxembourg.png",
+      "country": "belgium"
+    },
+    {
+      "name": "Namur",
+      "flag": "drapeaux_regions/belgique-namur.png",
+      "country": "belgium"
+    },
+    {
+      "name": "Wallonie",
+      "flag": "drapeaux_regions/belgique-wallonie.png",
+      "country": "belgium"
+    },
+    {
+      "name": "Groningue",
+      "flag": "drapeaux_regions/pays-bas-groningue.png",
+      "country": "netherlands"
+    },
+    {
+      "name": "Drenthe",
+      "flag": "drapeaux_regions/pays-bas-drenthe.png",
+      "country": "netherlands"
+    },
+    {
+      "name": "Flevoland",
+      "flag": "drapeaux_regions/pays-bas-flevoland.png",
+      "country": "netherlands"
+    },
+    {
+      "name": "Gueldre",
+      "flag": "drapeaux_regions/pays-bas-gueldre.png",
+      "country": "netherlands"
+    },
+    {
+      "name": "Limbourg",
+      "flag": "drapeaux_regions/pays-bas-limbourg.png",
+      "country": "netherlands"
+    },
+    {
+      "name": "Hollande-Septentrionale",
+      "flag": "drapeaux_regions/pays-bas-hollande-septentrionale.png",
+      "country": "netherlands"
+    },
+    {
+      "name": "Overijssel",
+      "flag": "drapeaux_regions/pays-bas-overijssel.png",
+      "country": "netherlands"
+    },
+    {
+      "name": "Zélande",
+      "flag": "drapeaux_regions/pays-bas-zelande.png",
+      "country": "netherlands"
+    },
+    {
+      "name": "Hollande-Méridionale",
+      "flag": "drapeaux_regions/pays-bas-hollande-meridionale.png",
+      "country": "netherlands"
+    },
+    {
+      "name": "Frise",
+      "flag": "drapeaux_regions/pays-bas-frise.png",
+      "country": "netherlands"
+    },
+    {
+      "name": "Brabant-Septentrional",
+      "flag": "drapeaux_regions/pays-bas-brabant-septentrional.png",
+      "country": "netherlands"
+    },
+    {
+      "name": "Utrecht",
+      "flag": "drapeaux_regions/pays-bas-utrecht.png",
+      "country": "netherlands"
+    },
+    {
+      "name": "Burgenland",
+      "flag": "drapeaux_regions/autriche-burgenland.png",
+      "country": "austria"
+    },
+    {
+      "name": "Carinthie",
+      "flag": "drapeaux_regions/autriche-carinthie.png",
+      "country": "austria"
+    },
+    {
+      "name": "Basse-Autriche",
+      "flag": "drapeaux_regions/autriche-basse-autriche.png",
+      "country": "austria"
+    },
+    {
+      "name": "Haute-Autriche",
+      "flag": "drapeaux_regions/autriche-haute-autriche.png",
+      "country": "austria"
+    },
+    {
+      "name": "Salzbourg",
+      "flag": "drapeaux_regions/autriche-salzbourg.png",
+      "country": "austria"
+    },
+    {
+      "name": "Styrie",
+      "flag": "drapeaux_regions/autriche-styrie.png",
+      "country": "austria"
+    },
+    {
+      "name": "Tyrol",
+      "flag": "drapeaux_regions/autriche-tyrol.png",
+      "country": "austria"
+    },
+    {
+      "name": "Connacht",
+      "flag": "drapeaux_regions/irlande-connacht.png",
+      "country": "ireland"
+    },
+    {
+      "name": "Leinster",
+      "flag": "drapeaux_regions/irlande-leinster.png",
+      "country": "ireland"
+    },
+    {
+      "name": "Munster",
+      "flag": "drapeaux_regions/irlande-munster.png",
+      "country": "ireland"
+    },
+    {
+      "name": "Ulster",
+      "flag": "drapeaux_regions/irlande-ulster.png",
+      "country": "ireland"
+    },
+    {
+      "name": "Mide",
+      "flag": "drapeaux_regions/irlande-mide.png",
+      "country": "ireland"
+    }
+  ]
+}
