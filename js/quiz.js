@@ -1,8 +1,11 @@
-// Quiz des Drapeaux Régionaux Européens
-// Logique principale de l'application
+// Quiz des Drapeaux Régionaux Européens - Version Unifiée
+// Supporte mode normal et mode avancé
+
+// Détection du mode
+const urlParams = new URLSearchParams(window.location.search);
+const isAdvancedMode = urlParams.get('mode') === 'advanced';
 
 // État de l'application
-
 let quizState = {
     selectedCountries: [],
     selectedDifficulty: null,
@@ -10,25 +13,73 @@ let quizState = {
     currentQuestionIndex: 0,
     score: 0,
     answered: false,
-    regions: []
+    regions: [],
+    advancedData: null,
+    trapQuestions: [],
+    isAdvanced: isAdvancedMode
 };
 
 // Sélecteurs DOM
-
 const setupScreen = document.getElementById('setupScreen');
 const quizScreen = document.getElementById('quizScreen');
 const resultsScreen = document.getElementById('resultsScreen');
 const startBtn = document.getElementById('startBtn');
 const restartBtn = document.getElementById('restartBtn');
+const modeSwitcher = document.getElementById('modeSwitcher');
+const difficultyButtons = document.getElementById('difficultyButtons');
+
+// Initialiser l'interface selon le mode
+function setupModeUI() {
+    if (isAdvancedMode) {
+        modeSwitcher.innerHTML = `
+            <span class="advanced-badge">🔥 Mode Avancé</span>
+            <a href="index.html" class="normal-link">Mode Normal</a>
+        `;
+        difficultyButtons.innerHTML = `
+            <button class="option-btn" data-difficulty="easy">
+                <span>Facile<br>(5 questions)<br><small>Régions connues uniquement</small></span>
+            </button>
+            <button class="option-btn" data-difficulty="medium">
+                <span>Moyen<br>(10 questions)<br><small>Mix de régions</small></span>
+            </button>
+            <button class="option-btn" data-difficulty="hard">
+                <span>Difficile<br>(15 questions)<br><small>Avec questions pièges</small></span>
+            </button>
+        `;
+    } else {
+        modeSwitcher.innerHTML = `
+            <span class="normal-badge">Mode Normal</span>
+            <a href="index.html?mode=advanced" class="advanced-link">🔥 Mode Avancé</a>
+        `;
+        difficultyButtons.innerHTML = `
+            <button class="option-btn" data-difficulty="easy">
+                <span>Facile<br>(5 questions)</span>
+            </button>
+            <button class="option-btn" data-difficulty="medium">
+                <span>Moyen<br>(10 questions)</span>
+            </button>
+            <button class="option-btn" data-difficulty="hard">
+                <span>Difficile<br>(15 questions)</span>
+            </button>
+        `;
+    }
+}
 
 // Chargement des données
-
-async function loadRegionsData() {
+async function loadData() {
     try {
-        const response = await fetch('data/regions.json');
+        const dataFile = isAdvancedMode ? 'data/regions_advanced.json' : 'data/regions.json';
+        const response = await fetch(dataFile);
         const data = await response.json();
-        quizState.regions = data.regions;
-        console.log(quizState.regions.length + ' regions loaded');
+
+        if (isAdvancedMode) {
+            quizState.advancedData = data;
+            quizState.regions = data.regions;
+            console.log(quizState.regions.length + ' regions loaded (advanced mode)');
+        } else {
+            quizState.regions = data.regions;
+            console.log(quizState.regions.length + ' regions loaded');
+        }
     } catch (error) {
         console.error('Error loading data', error);
         alert('Erreur lors du chargement des données. Veuillez recharger la page.');
@@ -36,7 +87,6 @@ async function loadRegionsData() {
 }
 
 // Configuration du quiz
-
 function setupCountrySelection() {
     document.querySelectorAll('[data-country]').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -85,12 +135,149 @@ function checkStartButton() {
     }
 }
 
-// Logique du quiz
+// Logique avancée - Filtrage par difficulté
+function filterRegionsByDifficulty(regions, difficulty) {
+    if (!isAdvancedMode) return regions;
 
+    switch(difficulty) {
+        case 'easy':
+            return regions.filter(r => r.difficulty <= 2);
+        case 'medium':
+            return regions;
+        case 'hard':
+            return regions.filter(r => r.difficulty >= 2);
+        default:
+            return regions;
+    }
+}
+
+function selectQuestionsForDifficulty(availableRegions, numQuestions, difficulty) {
+    if (!isAdvancedMode || difficulty === 'easy' || difficulty === 'hard') {
+        return shuffleArray(availableRegions).slice(0, numQuestions);
+    }
+
+    // Mode moyen : mix pondéré
+    const easy = availableRegions.filter(r => r.difficulty <= 2);
+    const medium = availableRegions.filter(r => r.difficulty === 3);
+    const hard = availableRegions.filter(r => r.difficulty >= 4);
+
+    const numEasy = Math.floor(numQuestions * 0.5);
+    const numMedium = Math.floor(numQuestions * 0.3);
+    const numHard = numQuestions - numEasy - numMedium;
+
+    const selected = [
+        ...shuffleArray(easy).slice(0, numEasy),
+        ...shuffleArray(medium).slice(0, numMedium),
+        ...shuffleArray(hard).slice(0, numHard)
+    ];
+
+    return shuffleArray(selected);
+}
+
+// Logique des questions pièges (mode avancé uniquement)
+function determineTrapQuestions(numQuestions, difficulty) {
+    if (!isAdvancedMode || difficulty !== 'hard') {
+        return [];
+    }
+
+    const trapIndices = [];
+
+    if (numQuestions >= 15) {
+        trapIndices.push({
+            index: 14,
+            type: 'similar_names'
+        });
+    }
+
+    const visualTrapInterval = 10;
+    for (let i = visualTrapInterval - 1; i < numQuestions; i += visualTrapInterval) {
+        trapIndices.push({
+            index: i,
+            type: 'visual_similarity'
+        });
+    }
+
+    return trapIndices;
+}
+
+function createSimilarNamesTrap(correctRegion) {
+    const trapGroup = correctRegion.trap_group;
+    if (!trapGroup) return null;
+
+    const groupData = quizState.advancedData.trap_groups[trapGroup];
+    if (!groupData) return null;
+
+    const groupRegions = quizState.regions.filter(r =>
+        groupData.regions.includes(r.name)
+    );
+
+    if (groupRegions.length < 3) return null;
+
+    let options = [...groupRegions];
+
+    while (options.length < 4) {
+        const similarRegions = quizState.regions.filter(r =>
+            !options.includes(r) &&
+            r.country === correctRegion.country
+        );
+        if (similarRegions.length > 0) {
+            options.push(shuffleArray(similarRegions)[0]);
+        } else {
+            break;
+        }
+    }
+
+    return {
+        type: 'similar_names',
+        options: shuffleArray(options).slice(0, 4),
+        message: 'Question Piège - Noms Similaires'
+    };
+}
+
+function createVisualSimilarityTrap(correctRegion) {
+    const visualGroup = correctRegion.visual_group;
+    if (!visualGroup) {
+        const sameCountry = quizState.regions.filter(r =>
+            r.country === correctRegion.country &&
+            r.name !== correctRegion.name
+        );
+
+        if (sameCountry.length >= 3) {
+            return {
+                type: 'visual_similarity',
+                options: shuffleArray([correctRegion, ...shuffleArray(sameCountry).slice(0, 3)]),
+                message: 'Question Piège - Drapeaux Similaires'
+            };
+        }
+        return null;
+    }
+
+    const groupData = quizState.advancedData.visual_groups[visualGroup];
+    if (!groupData) return null;
+
+    const groupRegions = quizState.regions.filter(r =>
+        groupData.regions.includes(r.name) &&
+        r.name !== correctRegion.name
+    );
+
+    if (groupRegions.length < 2) return null;
+
+    let options = shuffleArray([correctRegion, ...shuffleArray(groupRegions).slice(0, 3)]);
+
+    return {
+        type: 'visual_similarity',
+        options: options,
+        message: 'Question Piège - Drapeaux Similaires'
+    };
+}
+
+// Logique du quiz
 function startQuiz() {
     let availableRegions = quizState.selectedCountries.includes('all')
         ? [...quizState.regions]
         : quizState.regions.filter(r => quizState.selectedCountries.includes(r.country));
+
+    availableRegions = filterRegionsByDifficulty(availableRegions, quizState.selectedDifficulty);
 
     const numQuestions = {
         'easy': 5,
@@ -103,7 +290,16 @@ function startQuiz() {
         return;
     }
 
-    quizState.questions = shuffleArray(availableRegions).slice(0, numQuestions);
+    quizState.questions = selectQuestionsForDifficulty(availableRegions, numQuestions, quizState.selectedDifficulty);
+    quizState.trapQuestions = determineTrapQuestions(numQuestions, quizState.selectedDifficulty);
+
+    if (isAdvancedMode && quizState.trapQuestions.length > 0) {
+        console.log('Mode: ' + quizState.selectedDifficulty);
+        console.log(numQuestions + ' questions');
+        console.log(quizState.trapQuestions.length + ' trap questions at positions: ' +
+            quizState.trapQuestions.map(t => t.index + 1).join(', '));
+    }
+
     quizState.currentQuestionIndex = 0;
     quizState.score = 0;
     quizState.answered = false;
@@ -117,17 +313,45 @@ function startQuiz() {
 }
 
 function showQuestion() {
-    const question = quizState.questions[quizState.currentQuestionIndex];
+    const questionIndex = quizState.currentQuestionIndex;
+    const question = quizState.questions[questionIndex];
     quizState.answered = false;
 
-    document.getElementById('currentQuestion').textContent = quizState.currentQuestionIndex + 1;
+    const trapInfo = isAdvancedMode ? quizState.trapQuestions.find(t => t.index === questionIndex) : null;
+    const isTrap = !!trapInfo;
+
+    document.getElementById('currentQuestion').textContent = questionIndex + 1;
     document.getElementById('scoreValue').textContent = quizState.score;
 
-    const progress = (quizState.currentQuestionIndex / quizState.questions.length) * 100;
+    const progress = (questionIndex / quizState.questions.length) * 100;
     document.getElementById('progressBar').style.width = progress + '%';
 
     document.getElementById('flagImage').src = question.flag;
     document.getElementById('flagImage').alt = 'Drapeau de ' + question.name;
+
+    const trapIndicator = document.getElementById('trapIndicator');
+    if (isTrap && trapIndicator) {
+        let trapData;
+        if (trapInfo.type === 'similar_names') {
+            trapData = createSimilarNamesTrap(question);
+        } else if (trapInfo.type === 'visual_similarity') {
+            trapData = createVisualSimilarityTrap(question);
+        }
+
+        if (trapData) {
+            trapIndicator.textContent = trapData.message;
+            trapIndicator.classList.remove('hidden');
+            trapIndicator.classList.add('trap-' + trapInfo.type);
+
+            displayOptions(trapData.options, question.name);
+            return;
+        }
+    }
+
+    if (trapIndicator) {
+        trapIndicator.classList.add('hidden');
+        trapIndicator.className = 'trap-indicator hidden';
+    }
 
     const options = generateOptions(question);
     displayOptions(options, question.name);
@@ -227,7 +451,10 @@ function resetQuiz() {
         currentQuestionIndex: 0,
         score: 0,
         answered: false,
-        regions: quizState.regions
+        regions: quizState.regions,
+        advancedData: quizState.advancedData,
+        trapQuestions: [],
+        isAdvanced: isAdvancedMode
     };
 
     document.querySelectorAll('[data-country]').forEach(b => b.classList.remove('selected'));
@@ -239,7 +466,6 @@ function resetQuiz() {
 }
 
 // Utilitaires
-
 function shuffleArray(array) {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
@@ -250,11 +476,11 @@ function shuffleArray(array) {
 }
 
 // Initialisation
-
 async function init() {
-    console.log('Initializing quiz');
+    console.log('Initializing quiz (' + (isAdvancedMode ? 'advanced' : 'normal') + ' mode)');
 
-    await loadRegionsData();
+    setupModeUI();
+    await loadData();
 
     setupCountrySelection();
     setupDifficultySelection();

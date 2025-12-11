@@ -2,6 +2,16 @@
    QUIZ AVANCÉ - STYLES ADDITIONNELS
    ================================================================= */
 
+/* Mode Switcher */
+.mode-switcher {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
 /* Badge Mode Avancé dans le header */
 .advanced-badge {
     display: inline-block;
@@ -11,9 +21,42 @@
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 600;
-    margin-top: 0.5rem;
     box-shadow: 0 2px 8px rgba(139, 58, 58, 0.3);
     animation: pulse-badge 2s ease-in-out infinite;
+}
+
+/* Badge Mode Normal */
+.normal-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #2d7d4e, #3a9d5d);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(45, 125, 78, 0.3);
+}
+
+/* Lien vers l'autre mode */
+.normal-link,
+.advanced-link {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.normal-link:hover,
+.advanced-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
 }
 
 @keyframes pulse-badge {
