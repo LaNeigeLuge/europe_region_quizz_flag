@@ -56,7 +56,7 @@ python3 -m http.server 8000
 
 Ouvrez votre navigateur et allez sur :
 ```
-http://localhost:8000/quiz.html
+http://localhost:8000/
 ```
 
 ---
