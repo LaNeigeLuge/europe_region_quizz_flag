@@ -1,9 +1,4 @@
-// Quiz des Drapeaux Régionaux Européens - Version Unifiée
-// Supporte mode normal et mode avancé
-
-// Détection du mode
-const urlParams = new URLSearchParams(window.location.search);
-const isAdvancedMode = urlParams.get('mode') === 'advanced';
+// Quiz des Drapeaux Régionaux Européens
 
 // État de l'application
 let quizState = {
@@ -14,9 +9,8 @@ let quizState = {
     score: 0,
     answered: false,
     regions: [],
-    advancedData: null,
-    trapQuestions: [],
-    isAdvanced: isAdvancedMode
+    metadata: null,
+    trapQuestions: []
 };
 
 // Sélecteurs DOM
@@ -25,61 +19,32 @@ const quizScreen = document.getElementById('quizScreen');
 const resultsScreen = document.getElementById('resultsScreen');
 const startBtn = document.getElementById('startBtn');
 const restartBtn = document.getElementById('restartBtn');
-const modeSwitcher = document.getElementById('modeSwitcher');
 const difficultyButtons = document.getElementById('difficultyButtons');
 
-// Initialiser l'interface selon le mode
+// Initialiser l'interface
 function setupModeUI() {
-    if (isAdvancedMode) {
-        modeSwitcher.innerHTML = `
-            <span class="advanced-badge">🔥 Mode Avancé</span>
-            <a href="index.html" class="normal-link">Mode Normal</a>
-        `;
-        difficultyButtons.innerHTML = `
-            <button class="option-btn" data-difficulty="easy">
-                <span>Facile<br>(5 questions)<br><small>Régions connues uniquement</small></span>
-            </button>
-            <button class="option-btn" data-difficulty="medium">
-                <span>Moyen<br>(10 questions)<br><small>Mix de régions</small></span>
-            </button>
-            <button class="option-btn" data-difficulty="hard">
-                <span>Difficile<br>(15 questions)<br><small>Avec questions pièges</small></span>
-            </button>
-        `;
-    } else {
-        modeSwitcher.innerHTML = `
-            <span class="normal-badge">Mode Normal</span>
-            <a href="index.html?mode=advanced" class="advanced-link">🔥 Mode Avancé</a>
-        `;
-        difficultyButtons.innerHTML = `
-            <button class="option-btn" data-difficulty="easy">
-                <span>Facile<br>(5 questions)</span>
-            </button>
-            <button class="option-btn" data-difficulty="medium">
-                <span>Moyen<br>(10 questions)</span>
-            </button>
-            <button class="option-btn" data-difficulty="hard">
-                <span>Difficile<br>(15 questions)</span>
-            </button>
-        `;
-    }
+    difficultyButtons.innerHTML = `
+        <button class="option-btn" data-difficulty="easy">
+            <span>Facile<br>(5 questions)<br><small>Régions connues uniquement</small></span>
+        </button>
+        <button class="option-btn" data-difficulty="medium">
+            <span>Moyen<br>(10 questions)<br><small>Mix de régions</small></span>
+        </button>
+        <button class="option-btn" data-difficulty="hard">
+            <span>Difficile<br>(15 questions)<br><small>Avec questions pièges</small></span>
+        </button>
+    `;
 }
 
 // Chargement des données
 async function loadData() {
     try {
-        const dataFile = isAdvancedMode ? 'data/regions_advanced.json' : 'data/regions.json';
-        const response = await fetch(dataFile);
+        const response = await fetch('data/regions.json');
         const data = await response.json();
 
-        if (isAdvancedMode) {
-            quizState.advancedData = data;
-            quizState.regions = data.regions;
-            console.log(quizState.regions.length + ' regions loaded (advanced mode)');
-        } else {
-            quizState.regions = data.regions;
-            console.log(quizState.regions.length + ' regions loaded');
-        }
+        quizState.metadata = data;
+        quizState.regions = data.regions;
+        console.log(quizState.regions.length + ' regions loaded');
     } catch (error) {
         console.error('Error loading data', error);
         alert('Erreur lors du chargement des données. Veuillez recharger la page.');
@@ -135,10 +100,8 @@ function checkStartButton() {
     }
 }
 
-// Logique avancée - Filtrage par difficulté
+// Filtrage par difficulté
 function filterRegionsByDifficulty(regions, difficulty) {
-    if (!isAdvancedMode) return regions;
-
     switch(difficulty) {
         case 'easy':
             return regions.filter(r => r.difficulty <= 2);
@@ -152,7 +115,7 @@ function filterRegionsByDifficulty(regions, difficulty) {
 }
 
 function selectQuestionsForDifficulty(availableRegions, numQuestions, difficulty) {
-    if (!isAdvancedMode || difficulty === 'easy' || difficulty === 'hard') {
+    if (difficulty === 'easy' || difficulty === 'hard') {
         return shuffleArray(availableRegions).slice(0, numQuestions);
     }
 
@@ -174,9 +137,9 @@ function selectQuestionsForDifficulty(availableRegions, numQuestions, difficulty
     return shuffleArray(selected);
 }
 
-// Logique des questions pièges (mode avancé uniquement)
+// Logique des questions pièges
 function determineTrapQuestions(numQuestions, difficulty) {
-    if (!isAdvancedMode || difficulty !== 'hard') {
+    if (difficulty !== 'hard') {
         return [];
     }
 
@@ -204,7 +167,7 @@ function createSimilarNamesTrap(correctRegion) {
     const trapGroup = correctRegion.trap_group;
     if (!trapGroup) return null;
 
-    const groupData = quizState.advancedData.trap_groups[trapGroup];
+    const groupData = quizState.metadata.trap_groups[trapGroup];
     if (!groupData) return null;
 
     const groupRegions = quizState.regions.filter(r =>
@@ -252,7 +215,7 @@ function createVisualSimilarityTrap(correctRegion) {
         return null;
     }
 
-    const groupData = quizState.advancedData.visual_groups[visualGroup];
+    const groupData = quizState.metadata.visual_groups[visualGroup];
     if (!groupData) return null;
 
     const groupRegions = quizState.regions.filter(r =>
@@ -293,8 +256,8 @@ function startQuiz() {
     quizState.questions = selectQuestionsForDifficulty(availableRegions, numQuestions, quizState.selectedDifficulty);
     quizState.trapQuestions = determineTrapQuestions(numQuestions, quizState.selectedDifficulty);
 
-    if (isAdvancedMode && quizState.trapQuestions.length > 0) {
-        console.log('Mode: ' + quizState.selectedDifficulty);
+    if (quizState.trapQuestions.length > 0) {
+        console.log('Difficulty: ' + quizState.selectedDifficulty);
         console.log(numQuestions + ' questions');
         console.log(quizState.trapQuestions.length + ' trap questions at positions: ' +
             quizState.trapQuestions.map(t => t.index + 1).join(', '));
@@ -317,7 +280,7 @@ function showQuestion() {
     const question = quizState.questions[questionIndex];
     quizState.answered = false;
 
-    const trapInfo = isAdvancedMode ? quizState.trapQuestions.find(t => t.index === questionIndex) : null;
+    const trapInfo = quizState.trapQuestions.find(t => t.index === questionIndex);
     const isTrap = !!trapInfo;
 
     document.getElementById('currentQuestion').textContent = questionIndex + 1;
@@ -430,7 +393,12 @@ function showFeedbackModal(wrongAnswer, correctAnswer) {
     const wrongRegion = quizState.regions.find(r => r.name === wrongAnswer);
     const correctRegion = quizState.regions.find(r => r.name === correctAnswer);
 
-    if (!correctRegion) return;
+    if (!correctRegion) {
+        console.error('Correct region not found:', correctAnswer);
+        return;
+    }
+
+    console.log('Correct region data:', correctRegion);
 
     // Populate modal with data
     document.getElementById('wrongFlagImg').src = wrongRegion?.flag || '';
@@ -517,9 +485,8 @@ function resetQuiz() {
         score: 0,
         answered: false,
         regions: quizState.regions,
-        advancedData: quizState.advancedData,
-        trapQuestions: [],
-        isAdvanced: isAdvancedMode
+        metadata: quizState.metadata,
+        trapQuestions: []
     };
 
     document.querySelectorAll('[data-country]').forEach(b => b.classList.remove('selected'));
@@ -542,7 +509,7 @@ function shuffleArray(array) {
 
 // Initialisation
 async function init() {
-    console.log('Initializing quiz (' + (isAdvancedMode ? 'advanced' : 'normal') + ' mode)');
+    console.log('Initializing quiz');
 
     setupModeUI();
     await loadData();
