@@ -390,19 +390,69 @@ function handleAnswer(selectedAnswer, correctAnswer, selectedBtn) {
 
     buttons.forEach(btn => btn.disabled = true);
 
-    if (selectedAnswer === correctAnswer) {
+    const isCorrect = selectedAnswer === correctAnswer;
+
+    if (isCorrect) {
         selectedBtn.classList.add('correct');
         quizState.score++;
         document.getElementById('scoreValue').textContent = quizState.score;
+
+        setTimeout(() => {
+            quizState.currentQuestionIndex++;
+
+            if (quizState.currentQuestionIndex < quizState.questions.length) {
+                showQuestion();
+            } else {
+                showResults();
+            }
+        }, 1500);
     } else {
+        // Add shake animation to flag container
+        const flagContainer = document.querySelector('.flag-container');
+        flagContainer.classList.add('shake');
+        setTimeout(() => flagContainer.classList.remove('shake'), 600);
+
         selectedBtn.classList.add('incorrect');
         buttons.forEach(btn => {
             if (btn.textContent === correctAnswer) {
                 btn.classList.add('correct');
             }
         });
-    }
 
+        // Show feedback modal with educational information
+        setTimeout(() => {
+            showFeedbackModal(selectedAnswer, correctAnswer);
+        }, 800);
+    }
+}
+
+function showFeedbackModal(wrongAnswer, correctAnswer) {
+    const wrongRegion = quizState.regions.find(r => r.name === wrongAnswer);
+    const correctRegion = quizState.regions.find(r => r.name === correctAnswer);
+
+    if (!correctRegion) return;
+
+    // Populate modal with data
+    document.getElementById('wrongFlagImg').src = wrongRegion?.flag || '';
+    document.getElementById('wrongRegionName').textContent = wrongAnswer;
+    document.getElementById('correctFlagImg').src = correctRegion.flag;
+    document.getElementById('correctRegionName').textContent = correctAnswer;
+
+    document.getElementById('regionInfoTitle').innerHTML = `📍 ${correctAnswer}`;
+    document.getElementById('regionCountry').textContent = `${correctRegion.countryEmoji || ''} ${getCountryName(correctRegion.country)}`;
+    document.getElementById('regionPosition').textContent = correctRegion.position || 'Non spécifié';
+    document.getElementById('regionCapital').textContent = correctRegion.capital || 'Non spécifié';
+
+    // Show modal
+    const modal = document.getElementById('feedbackModal');
+    modal.classList.remove('hidden');
+}
+
+function closeFeedbackModal() {
+    const modal = document.getElementById('feedbackModal');
+    modal.classList.add('hidden');
+
+    // Move to next question
     setTimeout(() => {
         quizState.currentQuestionIndex++;
 
@@ -411,7 +461,22 @@ function handleAnswer(selectedAnswer, correctAnswer, selectedBtn) {
         } else {
             showResults();
         }
-    }, 2000);
+    }, 300);
+}
+
+function getCountryName(countryCode) {
+    const countries = {
+        'france': 'France',
+        'germany': 'Allemagne',
+        'switzerland': 'Suisse',
+        'spain': 'Espagne',
+        'italy': 'Italie',
+        'belgium': 'Belgique',
+        'netherlands': 'Pays-Bas',
+        'austria': 'Autriche',
+        'ireland': 'Irlande'
+    };
+    return countries[countryCode] || countryCode;
 }
 
 function showResults() {
@@ -487,6 +552,10 @@ async function init() {
 
     startBtn.addEventListener('click', startQuiz);
     restartBtn.addEventListener('click', resetQuiz);
+
+    // Feedback modal close button
+    const feedbackCloseBtn = document.getElementById('feedbackCloseBtn');
+    feedbackCloseBtn.addEventListener('click', closeFeedbackModal);
 
     console.log('Quiz ready');
 }

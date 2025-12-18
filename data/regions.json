@@ -3,637 +3,1018 @@
     {
       "name": "Bretagne",
       "flag": "drapeaux_regions/france-bretagne.png",
-      "country": "france"
+      "country": "france",
+      "countryEmoji": "🇫🇷",
+      "position": "Nord-Ouest",
+      "capital": "Rennes"
     },
     {
       "name": "Corse",
       "flag": "drapeaux_regions/france-corse.png",
-      "country": "france"
+      "country": "france",
+      "countryEmoji": "🇫🇷",
+      "position": "Sud-Est (île méditerranéenne)",
+      "capital": "Ajaccio"
     },
     {
       "name": "Provence-Alpes-Côte d'Azur",
       "flag": "drapeaux_regions/france-provence-alpes-cote-azur.png",
-      "country": "france"
+      "country": "france",
+      "countryEmoji": "🇫🇷",
+      "position": "Sud-Est",
+      "capital": "Marseille"
     },
     {
       "name": "Occitanie",
       "flag": "drapeaux_regions/france-occitanie.png",
-      "country": "france"
+      "country": "france",
+      "countryEmoji": "🇫🇷",
+      "position": "Sud",
+      "capital": "Toulouse"
     },
     {
       "name": "Normandie",
       "flag": "drapeaux_regions/france-normandie.png",
-      "country": "france"
+      "country": "france",
+      "countryEmoji": "🇫🇷",
+      "position": "Nord-Ouest",
+      "capital": "Rouen"
     },
     {
       "name": "Île-de-France",
       "flag": "drapeaux_regions/france-ile-de-france.png",
-      "country": "france"
+      "country": "france",
+      "countryEmoji": "🇫🇷",
+      "position": "Centre-Nord",
+      "capital": "Paris"
     },
     {
       "name": "Grand Est",
       "flag": "drapeaux_regions/france-grand-est.png",
-      "country": "france"
+      "country": "france",
+      "countryEmoji": "🇫🇷",
+      "position": "Est",
+      "capital": "Strasbourg"
     },
     {
       "name": "Nouvelle-Aquitaine",
       "flag": "drapeaux_regions/france-nouvelle-aquitaine.png",
-      "country": "france"
+      "country": "france",
+      "countryEmoji": "🇫🇷",
+      "position": "Sud-Ouest",
+      "capital": "Bordeaux"
     },
     {
       "name": "Auvergne-Rhône-Alpes",
       "flag": "drapeaux_regions/france-auvergne-rhone-alpes.png",
-      "country": "france"
+      "country": "france",
+      "countryEmoji": "🇫🇷",
+      "position": "Centre-Est",
+      "capital": "Lyon"
     },
     {
       "name": "Hauts-de-France",
       "flag": "drapeaux_regions/france-hauts-de-france.png",
-      "country": "france"
+      "country": "france",
+      "countryEmoji": "🇫🇷",
+      "position": "Nord",
+      "capital": "Lille"
     },
     {
       "name": "Bourgogne-Franche-Comté",
       "flag": "drapeaux_regions/france-bourgogne-franche-comte.png",
-      "country": "france"
+      "country": "france",
+      "countryEmoji": "🇫🇷",
+      "position": "Est",
+      "capital": "Dijon"
     },
     {
       "name": "Pays de la Loire",
       "flag": "drapeaux_regions/france-pays-de-la-loire.png",
-      "country": "france"
+      "country": "france",
+      "countryEmoji": "🇫🇷",
+      "position": "Ouest",
+      "capital": "Nantes"
     },
     {
       "name": "Centre-Val de Loire",
       "flag": "drapeaux_regions/france-centre-val-de-loire.png",
-      "country": "france"
+      "country": "france",
+      "countryEmoji": "🇫🇷",
+      "position": "Centre",
+      "capital": "Orléans"
     },
     {
       "name": "Bavière",
       "flag": "drapeaux_regions/allemagne-baviere.png",
-      "country": "germany"
+      "country": "germany",
+      "countryEmoji": "🇩🇪",
+      "position": "Sud-Est",
+      "capital": "Munich"
     },
     {
       "name": "Bade-Wurtemberg",
       "flag": "drapeaux_regions/allemagne-bade-wurtemberg.png",
-      "country": "germany"
+      "country": "germany",
+      "countryEmoji": "🇩🇪",
+      "position": "Sud-Ouest",
+      "capital": "Stuttgart"
     },
     {
       "name": "Rhénanie-du-Nord-Westphalie",
       "flag": "drapeaux_regions/allemagne-rhenanie-du-nord-westphalie.png",
-      "country": "germany"
+      "country": "germany",
+      "countryEmoji": "🇩🇪",
+      "position": "Ouest",
+      "capital": "Düsseldorf"
     },
     {
       "name": "Basse-Saxe",
       "flag": "drapeaux_regions/allemagne-basse-saxe.png",
-      "country": "germany"
+      "country": "germany",
+      "countryEmoji": "🇩🇪",
+      "position": "Nord-Ouest",
+      "capital": "Hanovre"
     },
     {
       "name": "Hesse",
       "flag": "drapeaux_regions/allemagne-hesse.png",
-      "country": "germany"
+      "country": "germany",
+      "countryEmoji": "🇩🇪",
+      "position": "Centre",
+      "capital": "Wiesbaden"
     },
     {
       "name": "Saxe-Anhalt",
       "flag": "drapeaux_regions/allemagne-saxe.png",
-      "country": "germany"
+      "country": "germany",
+      "countryEmoji": "🇩🇪",
+      "position": "Centre-Est",
+      "capital": "Magdebourg"
     },
     {
       "name": "Rhénanie-Palatinat",
       "flag": "drapeaux_regions/allemagne-rhenanie-palatinat.png",
-      "country": "germany"
+      "country": "germany",
+      "countryEmoji": "🇩🇪",
+      "position": "Ouest",
+      "capital": "Mayence"
     },
     {
       "name": "Berlin",
       "flag": "drapeaux_regions/allemagne-berlin.png",
-      "country": "germany"
+      "country": "germany",
+      "countryEmoji": "🇩🇪",
+      "position": "Nord-Est",
+      "capital": "Berlin"
     },
     {
       "name": "Schleswig-Holstein",
       "flag": "drapeaux_regions/allemagne-schleswig-holstein.png",
-      "country": "germany"
+      "country": "germany",
+      "countryEmoji": "🇩🇪",
+      "position": "Nord",
+      "capital": "Kiel"
     },
     {
       "name": "Brandebourg",
       "flag": "drapeaux_regions/allemagne-brandebourg.png",
-      "country": "germany"
+      "country": "germany",
+      "countryEmoji": "🇩🇪",
+      "position": "Nord-Est",
+      "capital": "Potsdam"
     },
     {
       "name": "Thuringe",
       "flag": "drapeaux_regions/allemagne-thuringe.png",
-      "country": "germany"
+      "country": "germany",
+      "countryEmoji": "🇩🇪",
+      "position": "Centre",
+      "capital": "Erfurt"
     },
     {
       "name": "Hambourg",
       "flag": "drapeaux_regions/allemagne-hambourg.png",
-      "country": "germany"
+      "country": "germany",
+      "countryEmoji": "🇩🇪",
+      "position": "Nord",
+      "capital": "Hambourg"
     },
     {
       "name": "Mecklembourg-Poméranie-Occidentale",
       "flag": "drapeaux_regions/allemagne-mecklembourg-pomeranie-occidentale.png",
-      "country": "germany"
+      "country": "germany",
+      "countryEmoji": "🇩🇪",
+      "position": "Nord-Est",
+      "capital": "Schwerin"
     },
     {
       "name": "Sarre",
       "flag": "drapeaux_regions/allemagne-sarre.png",
-      "country": "germany"
+      "country": "germany",
+      "countryEmoji": "🇩🇪",
+      "position": "Sud-Ouest",
+      "capital": "Sarrebruck"
     },
     {
       "name": "Brême",
       "flag": "drapeaux_regions/allemagne-breme.png",
-      "country": "germany"
+      "country": "germany",
+      "countryEmoji": "🇩🇪",
+      "position": "Nord",
+      "capital": "Brême"
     },
     {
       "name": "Zurich",
       "flag": "drapeaux_regions/suisse-zurich.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Nord-Est",
+      "capital": "Zurich"
     },
     {
       "name": "Berne",
       "flag": "drapeaux_regions/suisse-berne.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Centre-Ouest",
+      "capital": "Berne"
     },
     {
       "name": "Genève",
       "flag": "drapeaux_regions/suisse-geneve.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Sud-Ouest",
+      "capital": "Genève"
     },
     {
       "name": "Vaud",
       "flag": "drapeaux_regions/suisse-vaud.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Ouest",
+      "capital": "Lausanne"
     },
     {
       "name": "Valais",
       "flag": "drapeaux_regions/suisse-valais.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Sud",
+      "capital": "Sion"
     },
     {
       "name": "Bâle-Ville",
       "flag": "drapeaux_regions/suisse-bale-ville.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Nord-Ouest",
+      "capital": "Bâle"
     },
     {
       "name": "Tessin",
       "flag": "drapeaux_regions/suisse-tessin.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Sud",
+      "capital": "Bellinzone"
     },
     {
       "name": "Saint-Gall",
       "flag": "drapeaux_regions/suisse-saint-gall.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Nord-Est",
+      "capital": "Saint-Gall"
     },
     {
       "name": "Grisons",
       "flag": "drapeaux_regions/suisse-grisons.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Est",
+      "capital": "Coire"
     },
     {
       "name": "Argovie",
       "flag": "drapeaux_regions/suisse-argovie.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Nord",
+      "capital": "Aarau"
     },
     {
       "name": "Thurgovie",
       "flag": "drapeaux_regions/suisse-thurgovie.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Nord-Est",
+      "capital": "Frauenfeld"
     },
     {
       "name": "Fribourg",
       "flag": "drapeaux_regions/suisse-fribourg.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Ouest",
+      "capital": "Fribourg"
     },
     {
       "name": "Neuchâtel",
       "flag": "drapeaux_regions/suisse-neuchatel.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Ouest",
+      "capital": "Neuchâtel"
     },
     {
       "name": "Schwyz",
       "flag": "drapeaux_regions/suisse-schwyz.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Centre",
+      "capital": "Schwyz"
     },
     {
       "name": "Uri",
       "flag": "drapeaux_regions/suisse-uri.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Centre",
+      "capital": "Altdorf"
     },
     {
       "name": "Soleure",
       "flag": "drapeaux_regions/suisse-soleure.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Nord-Ouest",
+      "capital": "Soleure"
     },
     {
       "name": "Bâle-Campagne",
       "flag": "drapeaux_regions/suisse-bale-campagne.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Nord-Ouest",
+      "capital": "Liestal"
     },
     {
       "name": "Schaffhouse",
       "flag": "drapeaux_regions/suisse-schaffhouse.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Nord",
+      "capital": "Schaffhouse"
     },
     {
       "name": "Appenzell Rhodes-Extérieures",
       "flag": "drapeaux_regions/suisse-appenzell-rhodes-exterieures.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Nord-Est",
+      "capital": "Herisau"
     },
     {
       "name": "Appenzell Rhodes-Intérieures",
       "flag": "drapeaux_regions/suisse-appenzell-rhodes-interieures.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Nord-Est",
+      "capital": "Appenzell"
     },
     {
       "name": "Glaris",
       "flag": "drapeaux_regions/suisse-glaris.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Est",
+      "capital": "Glaris"
     },
     {
       "name": "Zoug",
       "flag": "drapeaux_regions/suisse-zoug.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Centre",
+      "capital": "Zoug"
     },
     {
       "name": "Obwald",
       "flag": "drapeaux_regions/suisse-obwald.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Centre",
+      "capital": "Sarnen"
     },
     {
       "name": "Nidwald",
       "flag": "drapeaux_regions/suisse-nidwald.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Centre",
+      "capital": "Stans"
     },
     {
       "name": "Jura",
       "flag": "drapeaux_regions/suisse-jura.png",
-      "country": "switzerland"
+      "country": "switzerland",
+      "countryEmoji": "🇨🇭",
+      "position": "Nord-Ouest",
+      "capital": "Delémont"
     },
     {
       "name": "Catalogne",
       "flag": "drapeaux_regions/espagne-catalogne.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Nord-Est",
+      "capital": "Barcelone"
     },
     {
       "name": "Pays Basque",
       "flag": "drapeaux_regions/espagne-pays-basque.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Nord",
+      "capital": "Vitoria-Gasteiz"
     },
     {
       "name": "Galice",
       "flag": "drapeaux_regions/espagne-galice.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Nord-Ouest",
+      "capital": "Saint-Jacques-de-Compostelle"
     },
     {
       "name": "Andalousie",
       "flag": "drapeaux_regions/espagne-andalousie.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Sud",
+      "capital": "Séville"
     },
     {
       "name": "Communauté Valencienne",
       "flag": "drapeaux_regions/espagne-communaute-valencienne.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Est",
+      "capital": "Valence"
     },
     {
       "name": "Canaries",
       "flag": "drapeaux_regions/espagne-canaries.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Sud-Ouest (îles atlantiques)",
+      "capital": "Las Palmas de Gran Canaria"
     },
     {
       "name": "Castille-et-León",
       "flag": "drapeaux_regions/espagne-castille-et-leon.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Nord-Ouest",
+      "capital": "Valladolid"
     },
     {
       "name": "Madrid",
       "flag": "drapeaux_regions/espagne-madrid.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Centre",
+      "capital": "Madrid"
     },
     {
       "name": "Castille-La Manche",
       "flag": "drapeaux_regions/espagne-castille-la-manche.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Centre",
+      "capital": "Tolède"
     },
     {
       "name": "Murcie",
       "flag": "drapeaux_regions/espagne-murcie.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Sud-Est",
+      "capital": "Murcie"
     },
     {
       "name": "Aragon",
       "flag": "drapeaux_regions/espagne-aragon.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Nord-Est",
+      "capital": "Saragosse"
     },
     {
       "name": "Estrémadure",
       "flag": "drapeaux_regions/espagne-estremadure.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Ouest",
+      "capital": "Mérida"
     },
     {
       "name": "Baléares",
       "flag": "drapeaux_regions/espagne-baleares.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Est (îles méditerranéennes)",
+      "capital": "Palma de Majorque"
     },
     {
       "name": "Asturies",
       "flag": "drapeaux_regions/espagne-asturies.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Nord",
+      "capital": "Oviedo"
     },
     {
       "name": "Navarre",
       "flag": "drapeaux_regions/espagne-navarre.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Nord",
+      "capital": "Pampelune"
     },
     {
       "name": "Cantabrie",
       "flag": "drapeaux_regions/espagne-cantabrie.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Nord",
+      "capital": "Santander"
     },
     {
       "name": "La Rioja",
       "flag": "drapeaux_regions/espagne-la-rioja.png",
-      "country": "spain"
+      "country": "spain",
+      "countryEmoji": "🇪🇸",
+      "position": "Nord",
+      "capital": "Logroño"
     },
     {
       "name": "Lombardie",
       "flag": "drapeaux_regions/italie-lombardie.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Nord",
+      "capital": "Milan"
     },
     {
       "name": "Sicile",
       "flag": "drapeaux_regions/italie-sicile.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Sud (île méditerranéenne)",
+      "capital": "Palerme"
     },
     {
       "name": "Vénétie",
       "flag": "drapeaux_regions/italie-venetie.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Nord-Est",
+      "capital": "Venise"
     },
     {
       "name": "Latium",
       "flag": "drapeaux_regions/italie-latium.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Centre",
+      "capital": "Rome"
     },
     {
       "name": "Piémont",
       "flag": "drapeaux_regions/italie-piemont.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Nord-Ouest",
+      "capital": "Turin"
     },
     {
       "name": "Campanie",
       "flag": "drapeaux_regions/italie-campanie.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Sud",
+      "capital": "Naples"
     },
     {
       "name": "Émilie-Romagne",
       "flag": "drapeaux_regions/italie-emilie-romagne.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Nord",
+      "capital": "Bologne"
     },
     {
       "name": "Toscane",
       "flag": "drapeaux_regions/italie-toscane.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Centre",
+      "capital": "Florence"
     },
     {
       "name": "Pouilles",
       "flag": "drapeaux_regions/italie-pouilles.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Sud-Est",
+      "capital": "Bari"
     },
     {
       "name": "Calabre",
       "flag": "drapeaux_regions/italie-calabre.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Sud",
+      "capital": "Catanzaro"
     },
     {
       "name": "Sardaigne",
       "flag": "drapeaux_regions/italie-sardaigne.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Ouest (île méditerranéenne)",
+      "capital": "Cagliari"
     },
     {
       "name": "Ligurie",
       "flag": "drapeaux_regions/italie-ligurie.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Nord-Ouest",
+      "capital": "Gênes"
     },
     {
       "name": "Marches",
       "flag": "drapeaux_regions/italie-marches.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Centre-Est",
+      "capital": "Ancône"
     },
     {
       "name": "Abruzzes",
       "flag": "drapeaux_regions/italie-abruzzes.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Centre",
+      "capital": "L'Aquila"
     },
     {
       "name": "Frioul-Vénétie Julienne",
       "flag": "drapeaux_regions/italie-frioul-venetie-julienne.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Nord-Est",
+      "capital": "Trieste"
     },
     {
       "name": "Trentin-Haut-Adige",
       "flag": "drapeaux_regions/italie-trentin-haut-adige.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Nord",
+      "capital": "Trente"
     },
     {
       "name": "Ombrie",
       "flag": "drapeaux_regions/italie-ombrie.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Centre",
+      "capital": "Pérouse"
     },
     {
       "name": "Basilicate",
       "flag": "drapeaux_regions/italie-basilicate.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Sud",
+      "capital": "Potenza"
     },
     {
       "name": "Molise",
       "flag": "drapeaux_regions/italie-molise.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Centre-Sud",
+      "capital": "Campobasso"
     },
     {
       "name": "Vallée d'Aoste",
       "flag": "drapeaux_regions/italie-vallee-aoste.png",
-      "country": "italy"
+      "country": "italy",
+      "countryEmoji": "🇮🇹",
+      "position": "Nord-Ouest",
+      "capital": "Aoste"
     },
     {
       "name": "Anvers",
       "flag": "drapeaux_regions/belgique-anvers.png",
-      "country": "belgium"
+      "country": "belgium",
+      "countryEmoji": "🇧🇪",
+      "position": "Nord",
+      "capital": "Anvers"
     },
     {
       "name": "Brabant Flamand",
       "flag": "drapeaux_regions/belgique-brabant-flamand.png",
-      "country": "belgium"
+      "country": "belgium",
+      "countryEmoji": "🇧🇪",
+      "position": "Centre",
+      "capital": "Louvain"
     },
     {
       "name": "Brabant Wallon",
       "flag": "drapeaux_regions/belgique-brabant-wallon.png",
-      "country": "belgium"
+      "country": "belgium",
+      "countryEmoji": "🇧🇪",
+      "position": "Centre",
+      "capital": "Wavre"
     },
     {
       "name": "Bruxelles-Capitale",
       "flag": "drapeaux_regions/belgique-bruxelles.png",
-      "country": "belgium"
+      "country": "belgium",
+      "countryEmoji": "🇧🇪",
+      "position": "Centre",
+      "capital": "Bruxelles"
     },
     {
       "name": "Flandre Occidentale",
       "flag": "drapeaux_regions/belgique-flandre-occidentale.png",
-      "country": "belgium"
+      "country": "belgium",
+      "countryEmoji": "🇧🇪",
+      "position": "Nord-Ouest",
+      "capital": "Bruges"
     },
     {
       "name": "Flandre Orientale",
       "flag": "drapeaux_regions/belgique-flandre-orientale.png",
-      "country": "belgium"
+      "country": "belgium",
+      "countryEmoji": "🇧🇪",
+      "position": "Nord",
+      "capital": "Gand"
     },
     {
       "name": "Région Flamande",
       "flag": "drapeaux_regions/belgique-flandre.png",
-      "country": "belgium"
+      "country": "belgium",
+      "countryEmoji": "🇧🇪",
+      "position": "Nord",
+      "capital": "Bruxelles"
     },
     {
       "name": "Hainaut",
       "flag": "drapeaux_regions/belgique-hainaut.png",
-      "country": "belgium"
+      "country": "belgium",
+      "countryEmoji": "🇧🇪",
+      "position": "Sud-Ouest",
+      "capital": "Mons"
     },
     {
       "name": "Liège",
       "flag": "drapeaux_regions/belgique-liege.png",
-      "country": "belgium"
+      "country": "belgium",
+      "countryEmoji": "🇧🇪",
+      "position": "Est",
+      "capital": "Liège"
     },
     {
       "name": "Limbourg",
       "flag": "drapeaux_regions/belgique-limbourg.png",
-      "country": "belgium"
+      "country": "belgium",
+      "countryEmoji": "🇧🇪",
+      "position": "Nord-Est",
+      "capital": "Hasselt"
     },
     {
       "name": "Luxembourg",
       "flag": "drapeaux_regions/belgique-luxembourg.png",
-      "country": "belgium"
+      "country": "belgium",
+      "countryEmoji": "🇧🇪",
+      "position": "Sud-Est",
+      "capital": "Arlon"
     },
     {
       "name": "Namur",
       "flag": "drapeaux_regions/belgique-namur.png",
-      "country": "belgium"
+      "country": "belgium",
+      "countryEmoji": "🇧🇪",
+      "position": "Sud",
+      "capital": "Namur"
     },
     {
       "name": "Wallonie",
       "flag": "drapeaux_regions/belgique-wallonie.png",
-      "country": "belgium"
+      "country": "belgium",
+      "countryEmoji": "🇧🇪",
+      "position": "Sud",
+      "capital": "Namur"
     },
     {
       "name": "Groningue",
       "flag": "drapeaux_regions/pays-bas-groningue.png",
-      "country": "netherlands"
+      "country": "netherlands",
+      "countryEmoji": "🇳🇱",
+      "position": "Nord-Est",
+      "capital": "Groningue"
     },
     {
       "name": "Drenthe",
       "flag": "drapeaux_regions/pays-bas-drenthe.png",
-      "country": "netherlands"
+      "country": "netherlands",
+      "countryEmoji": "🇳🇱",
+      "position": "Nord-Est",
+      "capital": "Assen"
     },
     {
       "name": "Flevoland",
       "flag": "drapeaux_regions/pays-bas-flevoland.png",
-      "country": "netherlands"
+      "country": "netherlands",
+      "countryEmoji": "🇳🇱",
+      "position": "Centre",
+      "capital": "Lelystad"
     },
     {
       "name": "Gueldre",
       "flag": "drapeaux_regions/pays-bas-gueldre.png",
-      "country": "netherlands"
+      "country": "netherlands",
+      "countryEmoji": "🇳🇱",
+      "position": "Est",
+      "capital": "Arnhem"
     },
     {
       "name": "Limbourg",
       "flag": "drapeaux_regions/pays-bas-limbourg.png",
-      "country": "netherlands"
+      "country": "netherlands",
+      "countryEmoji": "🇳🇱",
+      "position": "Sud-Est",
+      "capital": "Maastricht"
     },
     {
       "name": "Hollande-Septentrionale",
       "flag": "drapeaux_regions/pays-bas-hollande-septentrionale.png",
-      "country": "netherlands"
+      "country": "netherlands",
+      "countryEmoji": "🇳🇱",
+      "position": "Nord-Ouest",
+      "capital": "Haarlem"
     },
     {
       "name": "Overijssel",
       "flag": "drapeaux_regions/pays-bas-overijssel.png",
-      "country": "netherlands"
+      "country": "netherlands",
+      "countryEmoji": "🇳🇱",
+      "position": "Est",
+      "capital": "Zwolle"
     },
     {
       "name": "Zélande",
       "flag": "drapeaux_regions/pays-bas-zelande.png",
-      "country": "netherlands"
+      "country": "netherlands",
+      "countryEmoji": "🇳🇱",
+      "position": "Sud-Ouest",
+      "capital": "Middelbourg"
     },
     {
       "name": "Hollande-Méridionale",
       "flag": "drapeaux_regions/pays-bas-hollande-meridionale.png",
-      "country": "netherlands"
+      "country": "netherlands",
+      "countryEmoji": "🇳🇱",
+      "position": "Ouest",
+      "capital": "La Haye"
     },
     {
       "name": "Frise",
       "flag": "drapeaux_regions/pays-bas-frise.png",
-      "country": "netherlands"
+      "country": "netherlands",
+      "countryEmoji": "🇳🇱",
+      "position": "Nord",
+      "capital": "Leeuwarden"
     },
     {
       "name": "Brabant-Septentrional",
       "flag": "drapeaux_regions/pays-bas-brabant-septentrional.png",
-      "country": "netherlands"
+      "country": "netherlands",
+      "countryEmoji": "🇳🇱",
+      "position": "Sud",
+      "capital": "Bois-le-Duc"
     },
     {
       "name": "Utrecht",
       "flag": "drapeaux_regions/pays-bas-utrecht.png",
-      "country": "netherlands"
+      "country": "netherlands",
+      "countryEmoji": "🇳🇱",
+      "position": "Centre",
+      "capital": "Utrecht"
     },
     {
       "name": "Burgenland",
       "flag": "drapeaux_regions/autriche-burgenland.png",
-      "country": "austria"
+      "country": "austria",
+      "countryEmoji": "🇦🇹",
+      "position": "Est",
+      "capital": "Eisenstadt"
     },
     {
       "name": "Carinthie",
       "flag": "drapeaux_regions/autriche-carinthie.png",
-      "country": "austria"
+      "country": "austria",
+      "countryEmoji": "🇦🇹",
+      "position": "Sud",
+      "capital": "Klagenfurt"
     },
     {
       "name": "Basse-Autriche",
       "flag": "drapeaux_regions/autriche-basse-autriche.png",
-      "country": "austria"
+      "country": "austria",
+      "countryEmoji": "🇦🇹",
+      "position": "Nord-Est",
+      "capital": "Sankt Pölten"
     },
     {
       "name": "Haute-Autriche",
       "flag": "drapeaux_regions/autriche-haute-autriche.png",
-      "country": "austria"
+      "country": "austria",
+      "countryEmoji": "🇦🇹",
+      "position": "Nord",
+      "capital": "Linz"
     },
     {
       "name": "Salzbourg",
       "flag": "drapeaux_regions/autriche-salzbourg.png",
-      "country": "austria"
+      "country": "austria",
+      "countryEmoji": "🇦🇹",
+      "position": "Centre-Ouest",
+      "capital": "Salzbourg"
     },
     {
       "name": "Styrie",
       "flag": "drapeaux_regions/autriche-styrie.png",
-      "country": "austria"
+      "country": "austria",
+      "countryEmoji": "🇦🇹",
+      "position": "Sud-Est",
+      "capital": "Graz"
     },
     {
       "name": "Tyrol",
       "flag": "drapeaux_regions/autriche-tyrol.png",
-      "country": "austria"
+      "country": "austria",
+      "countryEmoji": "🇦🇹",
+      "position": "Ouest",
+      "capital": "Innsbruck"
     },
     {
       "name": "Connacht",
       "flag": "drapeaux_regions/irlande-connacht.png",
-      "country": "ireland"
+      "country": "ireland",
+      "countryEmoji": "🇮🇪",
+      "position": "Ouest",
+      "capital": "Galway"
     },
     {
       "name": "Leinster",
       "flag": "drapeaux_regions/irlande-leinster.png",
-      "country": "ireland"
+      "country": "ireland",
+      "countryEmoji": "🇮🇪",
+      "position": "Est",
+      "capital": "Dublin"
     },
     {
       "name": "Munster",
       "flag": "drapeaux_regions/irlande-munster.png",
-      "country": "ireland"
+      "country": "ireland",
+      "countryEmoji": "🇮🇪",
+      "position": "Sud",
+      "capital": "Cork"
     },
     {
       "name": "Ulster",
       "flag": "drapeaux_regions/irlande-ulster.png",
-      "country": "ireland"
+      "country": "ireland",
+      "countryEmoji": "🇮🇪",
+      "position": "Nord",
+      "capital": "Belfast"
     },
     {
       "name": "Mide",
       "flag": "drapeaux_regions/irlande-mide.png",
-      "country": "ireland"
+      "country": "ireland",
+      "countryEmoji": "🇮🇪",
+      "position": "Centre",
+      "capital": "Mullingar"
     }
   ]
 }

@@ -110,6 +110,47 @@
         </div>
     </div>
 
+    <!-- Feedback Modal -->
+    <div id="feedbackModal" class="feedback-modal hidden">
+        <div class="feedback-content">
+            <div class="feedback-header">
+                <div class="feedback-title">Oups ! Mauvaise réponse</div>
+                <div class="feedback-subtitle">Découvrez la bonne réponse</div>
+            </div>
+
+            <div class="flag-comparison">
+                <div class="flag-box wrong-flag">
+                    <div class="flag-box-title">Votre réponse</div>
+                    <img id="wrongFlagImg" src="" alt="Drapeau incorrect">
+                    <div class="flag-box-name" id="wrongRegionName"></div>
+                </div>
+                <div class="flag-box correct-flag">
+                    <div class="flag-box-title">Bonne réponse</div>
+                    <img id="correctFlagImg" src="" alt="Drapeau correct">
+                    <div class="flag-box-name" id="correctRegionName"></div>
+                </div>
+            </div>
+
+            <div class="region-info">
+                <h3 id="regionInfoTitle"></h3>
+                <div class="region-info-item">
+                    <span class="region-info-label">Pays :</span>
+                    <span class="region-info-value" id="regionCountry"></span>
+                </div>
+                <div class="region-info-item">
+                    <span class="region-info-label">Position :</span>
+                    <span class="region-info-value" id="regionPosition"></span>
+                </div>
+                <div class="region-info-item">
+                    <span class="region-info-label">Capitale :</span>
+                    <span class="region-info-value" id="regionCapital"></span>
+                </div>
+            </div>
+
+            <button id="feedbackCloseBtn" class="feedback-close-btn">Continuer</button>
+        </div>
+    </div>
+
     <!-- JavaScript -->
     <script src="js/quiz.js"></script>
 </body>
