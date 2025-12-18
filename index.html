@@ -102,6 +102,41 @@
         </div>
     </div>
 
+    <!-- Error Modal -->
+    <div id="errorModal" class="error-modal hidden">
+        <div class="error-content">
+            <div class="error-icon">⚠️</div>
+            <h2 class="error-title">Pas assez de régions !</h2>
+            <p class="error-message">Le quiz ne peut pas démarrer car il n'y a pas suffisamment de régions disponibles.</p>
+
+            <div class="error-stats">
+                <div class="error-stat-line">
+                    <span class="error-stat-label">Pays sélectionné(s) :</span>
+                    <span class="error-stat-value" id="errorCountry"></span>
+                </div>
+                <div class="error-stat-line">
+                    <span class="error-stat-label">Régions disponibles :</span>
+                    <span class="error-stat-value" id="errorAvailable"></span>
+                </div>
+                <div class="error-stat-line">
+                    <span class="error-stat-label">Régions requises :</span>
+                    <span class="error-stat-value" id="errorRequired"></span>
+                </div>
+            </div>
+
+            <div class="error-suggestions">
+                <div class="error-suggestions-title">💡 Solutions</div>
+                <ul class="error-suggestions-list">
+                    <li>Sélectionnez <strong>"Tous les pays"</strong> pour avoir accès à toutes les régions</li>
+                    <li>Choisissez une difficulté <strong>Facile (5 questions)</strong> ou <strong>Moyen (10 questions)</strong></li>
+                    <li>Combinez plusieurs pays pour augmenter le nombre de régions</li>
+                </ul>
+            </div>
+
+            <button id="errorCloseBtn" class="error-close-btn">J'ai compris</button>
+        </div>
+    </div>
+
     <div id="feedbackModal" class="feedback-modal hidden">
         <div class="feedback-content">
             <div class="feedback-header">
@@ -142,7 +177,10 @@
         </div>
     </div>
 
+    <!-- JavaScript - Load in order: utils, data, ui, then main quiz -->
+    <script src="js/utils.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/ui.js"></script>
     <script src="js/quiz.js"></script>
 </body>
-
 </html>

@@ -701,6 +701,138 @@
         }
 
         /* ============================================
+           ERROR MODAL
+           ============================================ */
+        .error-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26, 35, 50, 0.85);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 1rem;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .error-content {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideUpModal 0.4s ease-out;
+        }
+
+        .error-icon {
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .error-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--error);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .error-message {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .error-stats {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+            border-left: 4px solid var(--error);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .error-stat-line {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .error-stat-label {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .error-stat-value {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .error-suggestions {
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .error-suggestions-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .error-suggestions-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .error-suggestions-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--primary);
+        }
+
+        .error-suggestions-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .error-close-btn {
+            background: linear-gradient(135deg, var(--accent) 0%, #a04545 100%);
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        .error-close-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ============================================
            UTILITY CLASSES
            ============================================ */
         .hidden {

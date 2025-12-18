@@ -1,6 +1,5 @@
 // Quiz des Drapeaux Régionaux Européens
 
-// État de l'application
 let quizState = {
     selectedCountries: [],
     selectedDifficulty: null,
@@ -13,30 +12,14 @@ let quizState = {
     trapQuestions: []
 };
 
-// Sélecteurs DOM
 const setupScreen = document.getElementById('setupScreen');
 const quizScreen = document.getElementById('quizScreen');
 const resultsScreen = document.getElementById('resultsScreen');
 const startBtn = document.getElementById('startBtn');
 const restartBtn = document.getElementById('restartBtn');
+const errorCloseBtn = document.getElementById('errorCloseBtn');
 const difficultyButtons = document.getElementById('difficultyButtons');
 
-// Initialiser l'interface
-function setupModeUI() {
-    difficultyButtons.innerHTML = `
-        <button class="option-btn" data-difficulty="easy">
-            <span>Facile<br>(5 questions)<br><small>Régions connues uniquement</small></span>
-        </button>
-        <button class="option-btn" data-difficulty="medium">
-            <span>Moyen<br>(10 questions)<br><small>Mix de régions</small></span>
-        </button>
-        <button class="option-btn" data-difficulty="hard">
-            <span>Difficile<br>(15 questions)<br><small>Avec questions pièges</small></span>
-        </button>
-    `;
-}
-
-// Chargement des données
 async function loadData() {
     try {
         const response = await fetch('data/regions.json');
@@ -51,7 +34,6 @@ async function loadData() {
     }
 }
 
-// Configuration du quiz
 function setupCountrySelection() {
     document.querySelectorAll('[data-country]').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -102,7 +84,7 @@ function checkStartButton() {
 
 // Filtrage par difficulté
 function filterRegionsByDifficulty(regions, difficulty) {
-    switch(difficulty) {
+    switch (difficulty) {
         case 'easy':
             return regions.filter(r => r.difficulty <= 2);
         case 'medium':
@@ -234,7 +216,6 @@ function createVisualSimilarityTrap(correctRegion) {
     };
 }
 
-// Logique du quiz
 function startQuiz() {
     let availableRegions = quizState.selectedCountries.includes('all')
         ? [...quizState.regions]
@@ -249,7 +230,10 @@ function startQuiz() {
     }[quizState.selectedDifficulty];
 
     if (availableRegions.length < numQuestions) {
-        alert('Pas assez de régions disponibles pour ce pays (minimum ' + numQuestions + ' requis)');
+        const countryNames = quizState.selectedCountries
+            .map(c => getCountryName(c))
+            .join(', ');
+        showErrorModal(countryNames, availableRegions.length, numQuestions);
         return;
     }
 
@@ -382,7 +366,6 @@ function handleAnswer(selectedAnswer, correctAnswer, selectedBtn) {
             }
         });
 
-        // Show feedback modal with educational information
         setTimeout(() => {
             showFeedbackModal(selectedAnswer, correctAnswer);
         }, 800);
@@ -485,7 +468,7 @@ function resetQuiz() {
         score: 0,
         answered: false,
         regions: quizState.regions,
-        metadata: quizState.metadata,
+        advancedData: quizState.advancedData,
         trapQuestions: []
     };
 
@@ -497,7 +480,6 @@ function resetQuiz() {
     setupScreen.classList.remove('hidden');
 }
 
-// Utilitaires
 function shuffleArray(array) {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
@@ -507,11 +489,10 @@ function shuffleArray(array) {
     return newArray;
 }
 
-// Initialisation
 async function init() {
     console.log('Initializing quiz');
 
-    setupModeUI();
+    setupDifficultyUI();
     await loadData();
 
     setupCountrySelection();
@@ -519,6 +500,7 @@ async function init() {
 
     startBtn.addEventListener('click', startQuiz);
     restartBtn.addEventListener('click', resetQuiz);
+    errorCloseBtn.addEventListener('click', closeErrorModal);
 
     // Feedback modal close button
     const feedbackCloseBtn = document.getElementById('feedbackCloseBtn');
