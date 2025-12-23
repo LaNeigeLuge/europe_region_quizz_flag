@@ -31,7 +31,10 @@ function getCountryName(countryCode) {
         'belgium': 'Belgique',
         'netherlands': 'Pays-Bas',
         'austria': 'Autriche',
-        'ireland': 'Irlande'
+        'ireland': 'Irlande',
+        'czechia': 'Tchéquie',
+        'croatia': 'Croatie',
+        'greece': 'Grèce'
     };
     return countries[countryCode] || countryCode;
 }

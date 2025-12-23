@@ -1374,6 +1374,267 @@
       "capital": "Mullingar",
       "difficulty": 5,
       "tags": []
+    },
+    {
+      "name": "Prague",
+      "flag": "drapeaux_regions/tchequie-prague.png",
+      "country": "czechia",
+      "countryEmoji": "🇨🇿",
+      "position": "Centre",
+      "capital": "Prague",
+      "difficulty": 1
+    },
+    {
+      "name": "Bohême Centrale",
+      "flag": "drapeaux_regions/tchequie-boheme-centrale.png",
+      "country": "czechia",
+      "countryEmoji": "🇨🇿",
+      "position": "Centre",
+      "capital": "Prague",
+      "difficulty": 3
+    },
+    {
+      "name": "Bohême du Sud",
+      "flag": "drapeaux_regions/tchequie-boheme-sud.png",
+      "country": "czechia",
+      "countryEmoji": "🇨🇿",
+      "position": "Sud",
+      "capital": "České Budějovice",
+      "difficulty": 3
+    },
+    {
+      "name": "Plzeň",
+      "flag": "drapeaux_regions/tchequie-plzen.png",
+      "country": "czechia",
+      "countryEmoji": "🇨🇿",
+      "position": "Ouest",
+      "capital": "Plzeň",
+      "difficulty": 3
+    },
+    {
+      "name": "Karlovy Vary",
+      "flag": "drapeaux_regions/tchequie-karlovy-vary.png",
+      "country": "czechia",
+      "countryEmoji": "🇨🇿",
+      "position": "Ouest",
+      "capital": "Karlovy Vary",
+      "difficulty": 4
+    },
+    {
+      "name": "Ústí nad Labem",
+      "flag": "drapeaux_regions/tchequie-usti-nad-labem.png",
+      "country": "czechia",
+      "countryEmoji": "🇨🇿",
+      "position": "Nord-Ouest",
+      "capital": "Ústí nad Labem",
+      "difficulty": 4
+    },
+    {
+      "name": "Liberec",
+      "flag": "drapeaux_regions/tchequie-liberec.png",
+      "country": "czechia",
+      "countryEmoji": "🇨🇿",
+      "position": "Nord",
+      "capital": "Liberec",
+      "difficulty": 4
+    },
+    {
+      "name": "Hradec Králové",
+      "flag": "drapeaux_regions/tchequie-hradec-kralove.png",
+      "country": "czechia",
+      "countryEmoji": "🇨🇿",
+      "position": "Nord-Est",
+      "capital": "Hradec Králové",
+      "difficulty": 4
+    },
+    {
+      "name": "Pardubice",
+      "flag": "drapeaux_regions/tchequie-pardubice.png",
+      "country": "czechia",
+      "countryEmoji": "🇨🇿",
+      "position": "Est",
+      "capital": "Pardubice",
+      "difficulty": 4
+    },
+    {
+      "name": "Vysočina",
+      "flag": "drapeaux_regions/tchequie-vysocina.png",
+      "country": "czechia",
+      "countryEmoji": "🇨🇿",
+      "position": "Sud-Est",
+      "capital": "Jihlava",
+      "difficulty": 4
+    },
+    {
+      "name": "Moravie du Sud",
+      "flag": "drapeaux_regions/tchequie-moravie-sud.png",
+      "country": "czechia",
+      "countryEmoji": "🇨🇿",
+      "position": "Sud-Est",
+      "capital": "Brno",
+      "difficulty": 2
+    },
+    {
+      "name": "Olomouc",
+      "flag": "drapeaux_regions/tchequie-olomouc.png",
+      "country": "czechia",
+      "countryEmoji": "🇨🇿",
+      "position": "Est",
+      "capital": "Olomouc",
+      "difficulty": 3
+    },
+    {
+      "name": "Zlín",
+      "flag": "drapeaux_regions/tchequie-zlin.png",
+      "country": "czechia",
+      "countryEmoji": "🇨🇿",
+      "position": "Sud-Est",
+      "capital": "Zlín",
+      "difficulty": 4
+    },
+    {
+      "name": "Moravie-Silésie",
+      "flag": "drapeaux_regions/tchequie-moravie-silesie.png",
+      "country": "czechia",
+      "countryEmoji": "🇨🇿",
+      "position": "Nord-Est",
+      "capital": "Ostrava",
+      "difficulty": 3
+    },
+    {
+      "name": "Dalmatie",
+      "flag": "drapeaux_regions/croatie-dalmatie.png",
+      "country": "croatia",
+      "countryEmoji": "🇭🇷",
+      "position": "Sud (côte adriatique)",
+      "capital": "Split",
+      "difficulty": 2
+    },
+    {
+      "name": "Istrie",
+      "flag": "drapeaux_regions/croatie-istrie.png",
+      "country": "croatia",
+      "countryEmoji": "🇭🇷",
+      "position": "Nord-Ouest (péninsule)",
+      "capital": "Pazin",
+      "difficulty": 3
+    },
+    {
+      "name": "Croatie Centrale",
+      "flag": "drapeaux_regions/croatie-croatie-centrale.png",
+      "country": "croatia",
+      "countryEmoji": "🇭🇷",
+      "position": "Centre",
+      "capital": "Zagreb",
+      "difficulty": 2
+    },
+    {
+      "name": "Slavonie",
+      "flag": "drapeaux_regions/croatie-slavonie.png",
+      "country": "croatia",
+      "countryEmoji": "🇭🇷",
+      "position": "Est",
+      "capital": "Osijek",
+      "difficulty": 3
+    },
+    {
+      "name": "Lika-Senj",
+      "flag": "drapeaux_regions/croatie-lika-senj.png",
+      "country": "croatia",
+      "countryEmoji": "🇭🇷",
+      "position": "Centre-Ouest",
+      "capital": "Gospić",
+      "difficulty": 4
+    },
+    {
+      "name": "Égée",
+      "flag": "drapeaux_regions/grece-egee.png",
+      "country": "greece",
+      "countryEmoji": "🇬🇷",
+      "position": "Est (îles)",
+      "capital": "Mytilène",
+      "difficulty": 3
+    },
+    {
+      "name": "Corfou",
+      "flag": "drapeaux_regions/grece-corfou.png",
+      "country": "greece",
+      "countryEmoji": "🇬🇷",
+      "position": "Ouest (île ionienne)",
+      "capital": "Corfou",
+      "difficulty": 3
+    },
+    {
+      "name": "Crète",
+      "flag": "drapeaux_regions/grece-crete.png",
+      "country": "greece",
+      "countryEmoji": "🇬🇷",
+      "position": "Sud (île)",
+      "capital": "Héraklion",
+      "difficulty": 2
+    },
+    {
+      "name": "Chypre",
+      "flag": "drapeaux_regions/grece-chypre.png",
+      "country": "greece",
+      "countryEmoji": "🇬🇷",
+      "position": "Sud-Est (île)",
+      "capital": "Nicosie",
+      "difficulty": 2
+    },
+    {
+      "name": "Épire",
+      "flag": "drapeaux_regions/grece-epire.png",
+      "country": "greece",
+      "countryEmoji": "🇬🇷",
+      "position": "Nord-Ouest",
+      "capital": "Ioannina",
+      "difficulty": 3
+    },
+    {
+      "name": "Macédoine",
+      "flag": "drapeaux_regions/grece-macedoine.png",
+      "country": "greece",
+      "countryEmoji": "🇬🇷",
+      "position": "Nord",
+      "capital": "Thessalonique",
+      "difficulty": 2
+    },
+    {
+      "name": "Péloponnèse",
+      "flag": "drapeaux_regions/grece-peloponnese.png",
+      "country": "greece",
+      "countryEmoji": "🇬🇷",
+      "position": "Sud (péninsule)",
+      "capital": "Patras",
+      "difficulty": 2
+    },
+    {
+      "name": "Îles Ioniennes",
+      "flag": "drapeaux_regions/grece-iles-ioniennes.png",
+      "country": "greece",
+      "countryEmoji": "🇬🇷",
+      "position": "Ouest (îles)",
+      "capital": "Corfou",
+      "difficulty": 3
+    },
+    {
+      "name": "Thessalie",
+      "flag": "drapeaux_regions/grece-thessalie.png",
+      "country": "greece",
+      "countryEmoji": "🇬🇷",
+      "position": "Centre",
+      "capital": "Larissa",
+      "difficulty": 3
+    },
+    {
+      "name": "Thrace",
+      "flag": "drapeaux_regions/grece-thrace.png",
+      "country": "greece",
+      "countryEmoji": "🇬🇷",
+      "position": "Nord-Est",
+      "capital": "Komotini",
+      "difficulty": 3
     }
   ]
 }
